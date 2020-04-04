@@ -12,13 +12,8 @@
 	let ownership = 100;
 	let valuation_multiple = 10;
 	let valuation_metric = "arpa";
-	let valuation;
 
-	let compute_valuation = function() {
-        valuation = valuation_multiple * eval(valuation_metric);
-    };
-
-    compute_valuation()
+	$: valuation = valuation_multiple * (valuation_metric=="arpa") ? arpa : arpa - cost_per_customer;
 
 </script>
 
@@ -86,21 +81,21 @@
                 <div class="flex">
                     <span class="text-gray-700">⬇️ Monthly Revenue per Customer:</span>
                     <span>
-                        <input class="w-auto" type=number bind:value={arpa} on:change="{compute_valuation}" min=0 max=1000>
+                        <input class="w-auto" type=number bind:value={arpa} min=0 max=1000>
                         $
                     </span>
                 </div>
-                <input class="mt-1 block w-full" type=range bind:value={arpa} on:change="{compute_valuation}" min=0 max=1000>
+                <input class="mt-1 block w-full" type=range bind:value={arpa} min=0 max=1000>
             </label>
             <label>
                 <div class="flex">
                     <span class="text-gray-700">⬆️ Monthly Cost per Customer:</span>
                     <span>
-                        <input class="w-auto" type=number bind:value={cost_per_customer} on:change="{compute_valuation}" min=0 max=1000>
+                        <input class="w-auto" type=number bind:value={cost_per_customer} min=0 max=1000>
                         $
                     </span>
                 </div>
-                <input class="mt-1 block w-full" type=range bind:value={cost_per_customer} on:change="{compute_valuation}" min=0 max=1000>
+                <input class="mt-1 block w-full" type=range bind:value={cost_per_customer} min=0 max=1000>
             </label>
             <label>
                 <div class="flex">
@@ -151,18 +146,28 @@
                     <span> {valuation}$ </span>
                 </div>
                 <div class="flex">
-                    <input class="w-auto" type=number bind:value={valuation_multiple} on:change="{compute_valuation}" min=0 max=100>
+                    <input class="w-auto" type=number bind:value={valuation_multiple} min=0 max=100>
                     ⨉
-                    <select class="p-8" bind:value={valuation_metric} on:change="{compute_valuation}">
-                        <option value={"arpa"}>
-                            Monthly Recuring Revenue
-                        </option>
-                        <option value={"arpa - cost_per_customer"}>
-                            Monthly Margin
-                        </option>
-                    </select>
+                    <div class="relative">
+                        <select bind:value={valuation_metric}>
+                            <option value={"arpa"}>
+                                Monthly Revenue
+                            </option>
+                            <option value={"arpa - cost_per_customer"}>
+                                Monthly Margin
+                            </option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
                 </div>
             </label>
+        </div>
+    </div>
+    <div class="min-h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5">
+        <div class="border-2 rounded-lg border-yellow-500 px-5">
+            <h5>Projection: </h5>
         </div>
     </div>
 </main>
