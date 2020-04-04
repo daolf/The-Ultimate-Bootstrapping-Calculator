@@ -1,19 +1,113 @@
 <script>
+    import Chart from 'chart.js';
+    import { onMount } from 'svelte';
+
     let monthly_income = 4000;
     let monthly_outflow = 3500;
 	let savings = 1000;
 	let annual_raise = 5;
 	let month_to_first_dollar = 3;
 	let arpa = 30;
-	let cost_per_customer = 10;
-	let fixed_cost = 1000;
-	let mth_growth = 5;
-	let churn = 2;
+	let cost_per_customer = 5;
+    let number_of_customer_first_month = 10;
+	let fixed_cost = 100;
+	let growth = 5;
+	let churn = 0;
 	let ownership = 100;
-	let valuation_multiple = 40;
+	let part_of_revenue_income = 100;
+	let valuation_multiple = 20;
 	let valuation_metric = "arpa";
+	let equity;
+	let canvas;
 
-	$: valuation = Math.floor(ownership / 100 * valuation_multiple * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer));
+	let saving_data_points;
+	let old_income_data_points;
+	let new_income_data_points;
+	let equity_data_points;
+
+	$: {
+	    equity = Math.floor(ownership / 100 * valuation_multiple * number_of_customer_first_month * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer));
+	    saving_data_points = [];
+	    old_income_data_points = [];
+        new_income_data_points = [];
+        equity_data_points = [];
+        let last_month_savings = savings;
+        let monthly_raise = annual_raise / 12;
+
+	    for (let i=0; i<=36; i++) {
+
+	        let income = monthly_income * Math.pow( 1 + monthly_raise / 100, i);
+            saving_data_points.push(Math.floor(last_month_savings + ( income - monthly_outflow)));
+            last_month_savings += ( income - monthly_outflow);
+            old_income_data_points.push(Math.floor(income));
+
+            let new_number_of_customer = (number_of_customer_first_month * Math.pow( 1 + growth / 100, i) * Math.pow( 1 - churn / 100, i));
+            console.log(new_number_of_customer)
+            let current_month_revenue = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
+            console.log(Math.floor(current_month_revenue))
+            new_income_data_points.push(Math.floor(current_month_revenue));
+
+            let new_equity = ownership / 100 * valuation_multiple * new_number_of_customer * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer);
+            equity_data_points.push(Math.floor(new_equity))
+        }
+        renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points);
+
+    }
+
+	onMount(async() => {
+	    renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points);
+    });
+
+    function renderChart(saving_data_points, income_data_point, net_revenue_data_points, equity_data_points) {
+        (window.chart) ? window.chart.destroy() : null;
+        let labels = [];
+        for (let i=1; i<saving_data_points.length; i++) {labels.push(i)}
+        if (canvas) {
+            var ctx = canvas.getContext('2d');
+            var data = {
+                labels : labels,
+                datasets : [
+                    {
+                        label: "Savings with current job",
+                        backgroundColor: "#667eea",
+                        borderColor: "#667eea",
+                        data: saving_data_points,
+                        fill: false
+                    },
+                    {
+                        label: "Income with current job",
+                        backgroundColor: "#000aea",
+                        borderColor: "#000aea",
+                        data: old_income_data_points,
+                        fill: false
+                    },
+                    {
+                        label: "Income with new project",
+                        backgroundColor: "#48bb78",
+                        borderColor: "#48bb78",
+                        data: net_revenue_data_points,
+                        fill: false
+                    },
+                    {
+                        label: "Equity",
+                        backgroundColor: "#f56565",
+                        borderColor: "#f56565",
+                        data: equity_data_points,
+                        fill: false
+                    }
+                ]
+            };
+
+            window.chart = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: {
+                    animation: false
+                }
+            });
+
+        }
+    }
 
 </script>
 
@@ -53,17 +147,17 @@
                         %
                     </span>
                 </div>
-                <input class="mt-1 block w-full" type=range bind:value={annual_raise} min=0 max=10000000>
+                <input class="mt-1 block w-full" type=range bind:value={annual_raise} min=0 max="100">
             </label>
             <label>
                 <div class="flex">
                     <span class="text-gray-700">💰 Savings:</span>
                     <span>
-                        <input class="w-auto" type=number bind:value={savings} min=0 max=10000000>
+                        <input class="w-auto" type=number bind:value={savings} min=0 max=1000000>
                         $
                     </span>
                 </div>
-                <input class="mt-1 block w-full" type=range bind:value={savings} min=0 max=10000000>
+                <input class="mt-1 block w-full" type=range bind:value={savings} min=0 max=1000000>
             </label>
         </div>
         <div class="border-2 rounded-lg border-green-500 px-5">
@@ -76,6 +170,15 @@
                     </span>
                 </div>
                 <input class="mt-1 block w-full" type=range bind:value={month_to_first_dollar} min=0 max=24>
+            </label>
+            <label>
+                <div class="flex">
+                    <span class="text-gray-700">🤝 Number of customers first month:</span>
+                    <span>
+                        <input class="w-auto" type=number bind:value={number_of_customer_first_month} min=0 max=100>
+                    </span>
+                </div>
+                <input class="mt-1 block w-full" type=range bind:value={number_of_customer_first_month} min=0 max=100>
             </label>
             <label>
                 <div class="flex">
@@ -109,13 +212,23 @@
             </label>
             <label>
                 <div class="flex">
-                    <span class="text-gray-700">🚀 Monthly Growth:</span>
+                    <span class="text-gray-700">👛 Part of net revenue in salary:</span>
                     <span>
-                        <input class="w-auto" type=number bind:value={mth_growth} min=0 max=100>
+                        <input class="w-auto" type=number bind:value={part_of_revenue_income} min=0 max=100>
                         %
                     </span>
                 </div>
-                <input class="mt-1 block w-full" type=range bind:value={mth_growth} min=0 max=100>
+                <input class="mt-1 block w-full" type=range bind:value={part_of_revenue_income} min=0 max=100>
+            </label>
+            <label>
+                <div class="flex">
+                    <span class="text-gray-700">🚀 Monthly Growth:</span>
+                    <span>
+                        <input class="w-auto" type=number bind:value={growth} min=0 max=100>
+                        %
+                    </span>
+                </div>
+                <input class="mt-1 block w-full" type=range bind:value={growth} min=0 max=100>
             </label>
             <label>
                 <div class="flex">
@@ -162,7 +275,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <span> = {valuation}$ (for 1 customer) </span>
+                    <span> = {equity}$ (for first month) </span>
                 </div>
             </label>
         </div>
@@ -170,6 +283,7 @@
     <div class="min-h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5">
         <div class="border-2 rounded-lg border-yellow-500 px-5">
             <h5>Projection: </h5>
+            <canvas bind:this={canvas} width="400" height="200"></canvas>
         </div>
     </div>
 </main>
