@@ -10,10 +10,10 @@
 	let mth_growth = 5;
 	let churn = 2;
 	let ownership = 100;
-	let valuation_multiple = 10;
+	let valuation_multiple = 40;
 	let valuation_metric = "arpa";
 
-	$: valuation = valuation_multiple * (valuation_metric=="arpa") ? arpa : arpa - cost_per_customer;
+	$: valuation = Math.floor(ownership / 100 * valuation_multiple * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer));
 
 </script>
 
@@ -142,8 +142,7 @@
             </label>
             <label class="block">
                 <div class="flex mb-5">
-                    <span class="text-gray-700">🤞 Valuation: </span>
-                    <span> {valuation}$ </span>
+                    <span class="text-gray-700">🤞 Calculation Method </span>
                 </div>
                 <div class="flex">
                     <input class="w-auto" type=number bind:value={valuation_multiple} min=0 max=100>
@@ -161,6 +160,9 @@
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                         </div>
                     </div>
+                </div>
+                <div class="text-center mt-4">
+                    <span> = {valuation}$ (for 1 customer) </span>
                 </div>
             </label>
         </div>
