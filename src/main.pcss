@@ -1,0 +1,56 @@
+@custom-selector :--links a:link,a:visited,a:hover,a:focus,a:active;
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+h1 {
+    @apply text-4xl;
+    @apply font-bold;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+}
+
+h5 {
+    @apply text-xl;
+}
+
+.flex {
+    @apply items-center;
+    @apply justify-between;
+}
+
+input[type=number] {
+    @apply text-gray-700;
+}
+
+label {
+    @apply block;
+    @apply w-full;
+    @apply my-5;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+}
+
+:--links {
+    color: blue;
+    text-decoration: underline;
+}
+
+:--headings {
+    margin: .75rem 0;
+}
