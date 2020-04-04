@@ -116,174 +116,174 @@
 </style>
 
 <main>
-    <div class="min-h-64 grid grid-rows-1 grid-flow-col gap-4">
-        <div class="border-2 rounded-lg border-indigo-500 px-5">
-            <h5>Current Situation: </h5>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">📈 Monthly Income:</span>
-                    <span>
+    <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12 md:col-span-4">
+            <div class="border-2 rounded-lg border-indigo-500 px-5 mb-5">
+                <h5>Current Situation: </h5>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">📈Income:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={monthly_income} min="100" max="100000">
-                        $
+                        $/mo
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={monthly_income} min=100 max=100000>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">📉 Monthly Outflow:</span>
-                    <span>
+                    </div>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">📉Outflow:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={monthly_outflow} min="100" max="100000">
-                        $
+                        $/mo
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={monthly_outflow} min=100 max=100000>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">🤓 Avg Annual Raise:</span>
-                    <span>
+                    </div>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">🤓 Avg Annual Raise:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={annual_raise} min="0" max="100">
                         %
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={annual_raise} min=0 max="100">
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">💰 Savings:</span>
-                    <span>
+                    </div>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">💰 Savings:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={savings} min=0 max=1000000>
                         $
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={savings} min=0 max=1000000>
-            </label>
-        </div>
-        <div class="border-2 rounded-lg border-green-500 px-5">
-            <h5> Revenue Prevision: </h5>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">📅 Month until first customer:</span>
-                    <span>
+                    </div>
+                </label>
+            </div>
+            <div class="border-2 rounded-lg border-green-500 px-5 mb-5">
+                <h5> Revenue Prevision: </h5>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">📅 Month until first customer:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={month_to_first_dollar} min=0 max=24>
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={month_to_first_dollar} min=0 max=24>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">🤝 Number of customers first month:</span>
-                    <span>
+                    </div>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">🤝 Number of customers first month:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={number_of_customer_first_month} min=0 max=100>
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={number_of_customer_first_month} min=0 max=100>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">⬇️ Monthly Revenue per Customer:</span>
-                    <span>
+                    </div>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">⬇️ Revenue per Customer:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={arpa} min=0 max=1000>
-                        $
+                        $/mo
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={arpa} min=0 max=1000>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">⬆️ Monthly Cost per Customer:</span>
-                    <span>
+                    </div>
+                    <input class="mt-1 block w-full" type=range bind:value={arpa} min=0 max=1000>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">⬆️ Cost per Customer:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={cost_per_customer} min=0 max=1000>
-                        $
+                        $/mo
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={cost_per_customer} min=0 max=1000>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">💸 Fixed Monthly Cost:</span>
-                    <span>
+                    </div>
+                    <input class="mt-1 block w-full" type=range bind:value={cost_per_customer} min=0 max=1000>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">💸 Fixed Cost:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={fixed_cost} min=0 max=100000>
-                        $
+                        $/mo
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={fixed_cost} min=0 max=100000>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">👛 Part of net revenue in salary:</span>
-                    <span>
+                    </div>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">🚀 Growth:</span>
+                        <span>
+                        <input class="w-auto" type=number bind:value={growth} min=0 max=100>
+                        %/mo
+                    </span>
+                    </div>
+                    <input class="mt-1 block w-full" type=range bind:value={growth} min=0 max=100>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">💔 Churn:</span>
+                        <span>
+                        <input class="w-auto" type=number bind:value={churn} min=0 max=100>
+                        %/mo
+                    </span>
+                    </div>
+                    <input class="mt-1 block w-full" type=range bind:value={churn} min=0 max=100>
+                </label>
+                <label>
+                    <div class="flex">
+                        <span class="text-gray-700">👛 Part of net revenue in salary:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={part_of_revenue_income} min=0 max=100>
                         %
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={part_of_revenue_income} min=0 max=100>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">🚀 Monthly Growth:</span>
-                    <span>
-                        <input class="w-auto" type=number bind:value={growth} min=0 max=100>
-                        %
-                    </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={growth} min=0 max=100>
-            </label>
-            <label>
-                <div class="flex">
-                    <span class="text-gray-700">💔 Monthly Churn:</span>
-                    <span>
-                        <input class="w-auto" type=number bind:value={churn} min=0 max=100>
-                        %
-                    </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={churn} min=0 max=100>
-            </label>
-        </div>
-        <div class="border-2 rounded-lg border-red-500 px-5">
-            <h5> Equity: </h5>
-            <label class="block">
-                <div class="flex">
-                    <span class="text-gray-700">😎 Ownership:</span>
-                    <span>
+                    </div>
+                </label>
+            </div>
+            <div class="border-2 rounded-lg border-red-500 px-5 mb-5">
+                <h5> Equity: </h5>
+                <label class="block">
+                    <div class="flex">
+                        <span class="text-gray-700">😎 Ownership:</span>
+                        <span>
                         <input class="w-auto" type=number bind:value={ownership} min=0 max=100>
                         %
                     </span>
-                </div>
-                <input class="mt-1 block w-full" type=range bind:value={ownership} min=0 max=100>
-            </label>
-            <label class="block">
-                <div class="flex mb-5">
-                    <span class="text-gray-700">🤞 Calculation Method </span>
-                </div>
-                <div class="flex">
-                    <input class="w-auto" type=number bind:value={valuation_multiple} min=0 max=100>
-                    ⨉
-                    <div class="relative">
-                        <select bind:value={valuation_metric}>
-                            <option value={"arpa"}>
-                                Monthly Revenue
-                            </option>
-                            <option value={"arpa - cost_per_customer"}>
-                                Monthly Margin
-                            </option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                    <input class="mt-1 block w-full" type=range bind:value={ownership} min=0 max=100>
+                </label>
+                <label class="block">
+                    <div class="flex mb-5">
+                        <span class="text-gray-700">🤞 Calculation Method </span>
+                    </div>
+                    <div class="flex">
+                        <input class="w-auto" type=number bind:value={valuation_multiple} min=0 max=100>
+                        ⨉
+                        <div class="relative">
+                            <select bind:value={valuation_metric}>
+                                <option value={"arpa"}>
+                                    Monthly Revenue
+                                </option>
+                                <option value={"arpa - cost_per_customer"}>
+                                    Monthly Margin
+                                </option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-4">
-                    <span> = {equity}$ (for first month) </span>
-                </div>
-            </label>
+                    <div class="text-center mt-4">
+                        <span> = {equity}$ (for first month) </span>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="col-span-12 md:col-span-8">
+            <div class="border-2 rounded-lg border-yellow-500 px-5 sticky top-10">
+                <h5>Projection: </h5>
+                <canvas bind:this={canvas} width="400" height="200"></canvas>
+            </div>
         </div>
     </div>
+    <div class="min-h-64 grid grid-rows-1 grid-flow-col gap-4">
+
+    </div>
     <div class="min-h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5">
-        <div class="border-2 rounded-lg border-yellow-500 px-5">
-            <h5>Projection: </h5>
-            <canvas bind:this={canvas} width="400" height="200"></canvas>
-        </div>
+
     </div>
 </main>
