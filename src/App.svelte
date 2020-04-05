@@ -5,7 +5,7 @@
     import { onMount } from 'svelte';
 
     let monthly_income = 4000;
-    let monthly_outflow = 3500;
+    let monthly_outflow = 2500;
 	let savings = 1000;
 	let annual_raise = 5;
 	let month_to_first_dollar = 3;
@@ -13,7 +13,7 @@
 	let cost_per_customer = 5;
     let number_of_customer_first_month = 10;
 	let fixed_cost = 100;
-	let growth = 5;
+	let growth = 12;
 	let churn = 0;
 	let ownership = 100;
 	let part_of_revenue_income = 100;
@@ -46,7 +46,7 @@
 
             let new_number_of_customer = (number_of_customer_first_month * Math.pow( 1 + growth / 100, i) * Math.pow( 1 - churn / 100, i));
             let current_month_revenue = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
-            new_income_data_points.push(Math.floor(current_month_revenue));
+            new_income_data_points.push(Math.floor(current_month_revenue - monthly_outflow));
 
             let new_equity = ownership / 100 * valuation_multiple * new_number_of_customer * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer);
             equity_data_points.push(Math.floor(new_equity))
@@ -76,14 +76,14 @@
                         fill: false
                     },
                     {
-                        label: "Income w/current job",
+                        label: "Net income w/current job",
                         backgroundColor: "#000aea",
                         borderColor: "#000aea",
                         data: old_income_data_points,
                         fill: false
                     },
                     {
-                        label: "Income w/new project",
+                        label: "Net income w/new project",
                         backgroundColor: "#48bb78",
                         borderColor: "#48bb78",
                         data: net_revenue_data_points,
@@ -104,12 +104,27 @@
                 data: data,
                 options: {
                     animation: false,
+                    legend: {
+                        position: 'bottom',
+                    },
                     scales: {
-                        xAxes: [{gridLines: {display: false}}],
-                        yAxes: [{gridLines: {display: false}}],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Number of month from now"
+                            },
+                            gridLines: {display: false}
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Amount in $"
+                            },
+                            gridLines: {display: false}}],
                     },
                     tooltips: {
-                        intersect: true
+                        intersect: true,
+                        mode: 'nearest'
                     },
                     elements: {
                         point:{

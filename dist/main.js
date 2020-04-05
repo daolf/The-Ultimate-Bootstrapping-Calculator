@@ -21268,235 +21268,235 @@
     			div25 = element("div");
     			t75 = space();
     			div26 = element("div");
-    			add_location(h50, file, 132, 16, 4985);
+    			add_location(h50, file, 147, 16, 5604);
     			span0.className = "text-gray-700";
-    			add_location(span0, file, 135, 24, 5101);
+    			add_location(span0, file, 150, 24, 5720);
     			input0.className = "w-auto";
     			attr(input0, "type", "number");
     			input0.min = "100";
     			input0.max = "100000";
-    			add_location(input0, file, 137, 24, 5201);
-    			add_location(span1, file, 136, 24, 5170);
+    			add_location(input0, file, 152, 24, 5820);
+    			add_location(span1, file, 151, 24, 5789);
     			div0.className = "flex";
-    			add_location(div0, file, 134, 20, 5058);
-    			add_location(label0, file, 133, 16, 5030);
+    			add_location(div0, file, 149, 20, 5677);
+    			add_location(label0, file, 148, 16, 5649);
     			span2.className = "text-gray-700";
-    			add_location(span2, file, 144, 24, 5483);
+    			add_location(span2, file, 159, 24, 6102);
     			input1.className = "w-auto";
     			attr(input1, "type", "number");
     			input1.min = "100";
     			input1.max = "100000";
-    			add_location(input1, file, 146, 24, 5584);
-    			add_location(span3, file, 145, 24, 5553);
+    			add_location(input1, file, 161, 24, 6203);
+    			add_location(span3, file, 160, 24, 6172);
     			div1.className = "flex";
-    			add_location(div1, file, 143, 20, 5440);
-    			add_location(label1, file, 142, 16, 5412);
+    			add_location(div1, file, 158, 20, 6059);
+    			add_location(label1, file, 157, 16, 6031);
     			span4.className = "text-gray-700";
-    			add_location(span4, file, 153, 24, 5867);
+    			add_location(span4, file, 168, 24, 6486);
     			input2.className = "w-auto";
     			attr(input2, "type", "number");
     			input2.min = "0";
     			input2.max = "100";
-    			add_location(input2, file, 155, 24, 5978);
-    			add_location(span5, file, 154, 24, 5947);
+    			add_location(input2, file, 170, 24, 6597);
+    			add_location(span5, file, 169, 24, 6566);
     			div2.className = "flex";
-    			add_location(div2, file, 152, 20, 5824);
-    			add_location(label2, file, 151, 16, 5796);
+    			add_location(div2, file, 167, 20, 6443);
+    			add_location(label2, file, 166, 16, 6415);
     			span6.className = "text-gray-700";
-    			add_location(span6, file, 162, 24, 6250);
+    			add_location(span6, file, 177, 24, 6869);
     			input3.className = "w-auto";
     			attr(input3, "type", "number");
     			input3.min = "0";
     			input3.max = "1000000";
-    			add_location(input3, file, 164, 24, 6352);
-    			add_location(span7, file, 163, 24, 6321);
+    			add_location(input3, file, 179, 24, 6971);
+    			add_location(span7, file, 178, 24, 6940);
     			div3.className = "flex";
-    			add_location(div3, file, 161, 20, 6207);
-    			add_location(label3, file, 160, 16, 6179);
+    			add_location(div3, file, 176, 20, 6826);
+    			add_location(label3, file, 175, 16, 6798);
     			div4.className = "border-2 rounded-lg border-indigo-500 px-5 mb-5";
-    			add_location(div4, file, 131, 12, 4907);
-    			add_location(h51, file, 171, 16, 6640);
+    			add_location(div4, file, 146, 12, 5526);
+    			add_location(h51, file, 186, 16, 7259);
     			span8.className = "text-gray-700";
-    			add_location(span8, file, 174, 24, 6757);
+    			add_location(span8, file, 189, 24, 7376);
     			input4.className = "w-auto";
     			attr(input4, "type", "number");
     			input4.min = "0";
     			input4.max = "24";
-    			add_location(input4, file, 176, 24, 6878);
-    			add_location(span9, file, 175, 24, 6847);
+    			add_location(input4, file, 191, 24, 7497);
+    			add_location(span9, file, 190, 24, 7466);
     			div5.className = "flex";
-    			add_location(div5, file, 173, 20, 6714);
-    			add_location(label4, file, 172, 16, 6686);
+    			add_location(div5, file, 188, 20, 7333);
+    			add_location(label4, file, 187, 16, 7305);
     			span10.className = "text-gray-700";
-    			add_location(span10, file, 182, 24, 7128);
+    			add_location(span10, file, 197, 24, 7747);
     			input5.className = "w-auto";
     			attr(input5, "type", "number");
     			input5.min = "0";
     			input5.max = "100";
-    			add_location(input5, file, 184, 24, 7254);
-    			add_location(span11, file, 183, 24, 7223);
+    			add_location(input5, file, 199, 24, 7873);
+    			add_location(span11, file, 198, 24, 7842);
     			div6.className = "flex";
-    			add_location(div6, file, 181, 20, 7085);
-    			add_location(label5, file, 180, 16, 7057);
+    			add_location(div6, file, 196, 20, 7704);
+    			add_location(label5, file, 195, 16, 7676);
     			span12.className = "text-gray-700";
-    			add_location(span12, file, 190, 24, 7514);
+    			add_location(span12, file, 205, 24, 8133);
     			input6.className = "w-auto";
     			attr(input6, "type", "number");
     			input6.min = "0";
     			input6.max = "1000";
-    			add_location(input6, file, 192, 24, 7629);
-    			add_location(span13, file, 191, 24, 7598);
+    			add_location(input6, file, 207, 24, 8248);
+    			add_location(span13, file, 206, 24, 8217);
     			div7.className = "flex";
-    			add_location(div7, file, 189, 20, 7471);
+    			add_location(div7, file, 204, 20, 8090);
     			input7.className = "mt-1 block w-full";
     			attr(input7, "type", "range");
     			input7.min = "0";
     			input7.max = "1000";
-    			add_location(input7, file, 196, 20, 7801);
-    			add_location(label6, file, 188, 16, 7443);
+    			add_location(input7, file, 211, 20, 8420);
+    			add_location(label6, file, 203, 16, 8062);
     			span14.className = "text-gray-700";
-    			add_location(span14, file, 200, 24, 7991);
+    			add_location(span14, file, 215, 24, 8610);
     			input8.className = "w-auto";
     			attr(input8, "type", "number");
     			input8.min = "0";
     			input8.max = "1000";
-    			add_location(input8, file, 202, 24, 8103);
-    			add_location(span15, file, 201, 24, 8072);
+    			add_location(input8, file, 217, 24, 8722);
+    			add_location(span15, file, 216, 24, 8691);
     			div8.className = "flex";
-    			add_location(div8, file, 199, 20, 7948);
+    			add_location(div8, file, 214, 20, 8567);
     			input9.className = "mt-1 block w-full";
     			attr(input9, "type", "range");
     			input9.min = "0";
     			input9.max = "1000";
-    			add_location(input9, file, 206, 20, 8288);
-    			add_location(label7, file, 198, 16, 7920);
+    			add_location(input9, file, 221, 20, 8907);
+    			add_location(label7, file, 213, 16, 8539);
     			span16.className = "text-gray-700";
-    			add_location(span16, file, 210, 24, 8491);
+    			add_location(span16, file, 225, 24, 9110);
     			input10.className = "w-auto";
     			attr(input10, "type", "number");
     			input10.min = "0";
     			input10.max = "100000";
-    			add_location(input10, file, 212, 24, 8596);
-    			add_location(span17, file, 211, 24, 8565);
+    			add_location(input10, file, 227, 24, 9215);
+    			add_location(span17, file, 226, 24, 9184);
     			div9.className = "flex";
-    			add_location(div9, file, 209, 20, 8448);
-    			add_location(label8, file, 208, 16, 8420);
+    			add_location(div9, file, 224, 20, 9067);
+    			add_location(label8, file, 223, 16, 9039);
     			span18.className = "text-gray-700";
-    			add_location(span18, file, 219, 24, 8868);
+    			add_location(span18, file, 234, 24, 9487);
     			input11.className = "w-auto";
     			attr(input11, "type", "number");
     			input11.min = "0";
     			input11.max = "100";
-    			add_location(input11, file, 221, 24, 8969);
-    			add_location(span19, file, 220, 24, 8938);
+    			add_location(input11, file, 236, 24, 9588);
+    			add_location(span19, file, 235, 24, 9557);
     			div10.className = "flex";
-    			add_location(div10, file, 218, 20, 8825);
+    			add_location(div10, file, 233, 20, 9444);
     			input12.className = "mt-1 block w-full";
     			attr(input12, "type", "range");
     			input12.min = "0";
     			input12.max = "100";
-    			add_location(input12, file, 225, 20, 9142);
-    			add_location(label9, file, 217, 16, 8797);
+    			add_location(input12, file, 240, 20, 9761);
+    			add_location(label9, file, 232, 16, 9416);
     			span20.className = "text-gray-700";
-    			add_location(span20, file, 229, 24, 9333);
+    			add_location(span20, file, 244, 24, 9952);
     			input13.className = "w-auto";
     			attr(input13, "type", "number");
     			input13.min = "0";
     			input13.max = "100";
-    			add_location(input13, file, 231, 24, 9433);
-    			add_location(span21, file, 230, 24, 9402);
+    			add_location(input13, file, 246, 24, 10052);
+    			add_location(span21, file, 245, 24, 10021);
     			div11.className = "flex";
-    			add_location(div11, file, 228, 20, 9290);
+    			add_location(div11, file, 243, 20, 9909);
     			input14.className = "mt-1 block w-full";
     			attr(input14, "type", "range");
     			input14.min = "0";
     			input14.max = "100";
-    			add_location(input14, file, 235, 20, 9605);
-    			add_location(label10, file, 227, 16, 9262);
+    			add_location(input14, file, 250, 20, 10224);
+    			add_location(label10, file, 242, 16, 9881);
     			span22.className = "text-gray-700";
-    			add_location(span22, file, 239, 24, 9795);
+    			add_location(span22, file, 254, 24, 10414);
     			input15.className = "w-auto";
     			attr(input15, "type", "number");
     			input15.min = "0";
     			input15.max = "100";
-    			add_location(input15, file, 241, 24, 9919);
-    			add_location(span23, file, 240, 24, 9888);
+    			add_location(input15, file, 256, 24, 10538);
+    			add_location(span23, file, 255, 24, 10507);
     			div12.className = "flex";
-    			add_location(div12, file, 238, 20, 9752);
-    			add_location(label11, file, 237, 16, 9724);
+    			add_location(div12, file, 253, 20, 10371);
+    			add_location(label11, file, 252, 16, 10343);
     			div13.className = "border-2 rounded-lg border-green-500 px-5 mb-5";
-    			add_location(div13, file, 170, 12, 6563);
-    			add_location(h52, file, 248, 16, 10216);
+    			add_location(div13, file, 185, 12, 7182);
+    			add_location(h52, file, 263, 16, 10835);
     			span24.className = "text-gray-700";
-    			add_location(span24, file, 251, 24, 10336);
+    			add_location(span24, file, 266, 24, 10955);
     			input16.className = "w-auto";
     			attr(input16, "type", "number");
     			input16.min = "0";
     			input16.max = "100";
-    			add_location(input16, file, 253, 24, 10440);
-    			add_location(span25, file, 252, 24, 10409);
+    			add_location(input16, file, 268, 24, 11059);
+    			add_location(span25, file, 267, 24, 11028);
     			div14.className = "flex";
-    			add_location(div14, file, 250, 20, 10293);
+    			add_location(div14, file, 265, 20, 10912);
     			input17.className = "mt-1 block w-full";
     			attr(input17, "type", "range");
     			input17.min = "0";
     			input17.max = "100";
-    			add_location(input17, file, 257, 20, 10613);
+    			add_location(input17, file, 272, 20, 11232);
     			label12.className = "block";
-    			add_location(label12, file, 249, 16, 10251);
+    			add_location(label12, file, 264, 16, 10870);
     			span26.className = "text-gray-700";
-    			add_location(span26, file, 261, 24, 10826);
+    			add_location(span26, file, 276, 24, 11445);
     			div15.className = "flex mb-5";
-    			add_location(div15, file, 260, 20, 10778);
+    			add_location(div15, file, 275, 20, 11397);
     			input18.className = "w-auto";
     			attr(input18, "type", "number");
     			input18.min = "0";
     			input18.max = "100";
-    			add_location(input18, file, 264, 24, 10974);
+    			add_location(input18, file, 279, 24, 11593);
     			option0.__value = "arpa";
     			option0.value = option0.__value;
-    			add_location(option0, file, 268, 32, 11227);
+    			add_location(option0, file, 283, 32, 11846);
     			option1.__value = "arpa - cost_per_customer";
     			option1.value = option1.__value;
-    			add_location(option1, file, 271, 32, 11377);
+    			add_location(option1, file, 286, 32, 11996);
     			if (ctx.valuation_metric === void 0) add_render_callback(() => ctx.select_change_handler.call(select));
-    			add_location(select, file, 267, 28, 11156);
+    			add_location(select, file, 282, 28, 11775);
     			attr(path, "d", "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z");
-    			add_location(path, file, 276, 121, 11799);
+    			add_location(path, file, 291, 121, 12418);
     			attr(svg, "class", "fill-current h-4 w-4");
     			attr(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr(svg, "viewBox", "0 0 20 20");
-    			add_location(svg, file, 276, 32, 11710);
+    			add_location(svg, file, 291, 32, 12329);
     			div16.className = "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700";
-    			add_location(div16, file, 275, 28, 11580);
+    			add_location(div16, file, 290, 28, 12199);
     			div17.className = "relative";
-    			add_location(div17, file, 266, 24, 11105);
+    			add_location(div17, file, 281, 24, 11724);
     			div18.className = "flex";
-    			add_location(div18, file, 263, 20, 10931);
-    			add_location(span27, file, 281, 24, 12060);
+    			add_location(div18, file, 278, 20, 11550);
+    			add_location(span27, file, 296, 24, 12679);
     			div19.className = "text-center mt-4";
-    			add_location(div19, file, 280, 20, 12005);
+    			add_location(div19, file, 295, 20, 12624);
     			label13.className = "block";
-    			add_location(label13, file, 259, 16, 10736);
+    			add_location(label13, file, 274, 16, 11355);
     			div20.className = "border-2 rounded-lg border-red-500 px-5 mb-5";
-    			add_location(div20, file, 247, 12, 10141);
+    			add_location(div20, file, 262, 12, 10760);
     			div21.className = "col-span-12 md:col-span-4";
-    			add_location(div21, file, 130, 8, 4855);
-    			add_location(h53, file, 288, 16, 12338);
+    			add_location(div21, file, 145, 8, 5474);
+    			add_location(h53, file, 303, 16, 12957);
     			canvas_1.width = "400";
     			canvas_1.height = "200";
-    			add_location(canvas_1, file, 289, 16, 12376);
+    			add_location(canvas_1, file, 304, 16, 12995);
     			div22.className = "border-2 rounded-lg border-yellow-500 px-5 sticky top-10";
-    			add_location(div22, file, 287, 12, 12251);
+    			add_location(div22, file, 302, 12, 12870);
     			div23.className = "col-span-12 md:col-span-8";
-    			add_location(div23, file, 286, 8, 12199);
+    			add_location(div23, file, 301, 8, 12818);
     			div24.className = "grid grid-cols-12 gap-4";
-    			add_location(div24, file, 129, 4, 4809);
+    			add_location(div24, file, 144, 4, 5428);
     			div25.className = "min-h-64 grid grid-rows-1 grid-flow-col gap-4";
-    			add_location(div25, file, 293, 4, 12487);
+    			add_location(div25, file, 308, 4, 13106);
     			div26.className = "min-h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5";
-    			add_location(div26, file, 296, 4, 12563);
-    			add_location(main, file, 128, 0, 4798);
+    			add_location(div26, file, 311, 4, 13182);
+    			add_location(main, file, 143, 0, 5417);
 
     			dispose = [
     				listen(input0, "input", ctx.input0_input_handler),
@@ -21801,7 +21801,7 @@
         Chart.defaults.global.defaultFontSize = 17;
 
         let monthly_income = 4000;
-        let monthly_outflow = 3500;
+        let monthly_outflow = 2500;
     	let savings = 1000;
     	let annual_raise = 5;
     	let month_to_first_dollar = 3;
@@ -21809,7 +21809,7 @@
     	let cost_per_customer = 5;
         let number_of_customer_first_month = 10;
     	let fixed_cost = 100;
-    	let growth = 5;
+    	let growth = 12;
     	let churn = 0;
     	let ownership = 100;
     	let part_of_revenue_income = 100;
@@ -21845,14 +21845,14 @@
                             fill: false
                         },
                         {
-                            label: "Income w/current job",
+                            label: "Net income w/current job",
                             backgroundColor: "#000aea",
                             borderColor: "#000aea",
                             data: old_income_data_points,
                             fill: false
                         },
                         {
-                            label: "Income w/new project",
+                            label: "Net income w/new project",
                             backgroundColor: "#48bb78",
                             borderColor: "#48bb78",
                             data: net_revenue_data_points,
@@ -21873,12 +21873,27 @@
                     data: data,
                     options: {
                         animation: false,
+                        legend: {
+                            position: 'bottom',
+                        },
                         scales: {
-                            xAxes: [{gridLines: {display: false}}],
-                            yAxes: [{gridLines: {display: false}}],
+                            xAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: "Number of month from now"
+                                },
+                                gridLines: {display: false}
+                            }],
+                            yAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: "Amount in $"
+                                },
+                                gridLines: {display: false}}],
                         },
                         tooltips: {
-                            intersect: true
+                            intersect: true,
+                            mode: 'nearest'
                         },
                         elements: {
                             point:{
@@ -22015,7 +22030,7 @@
             
                         let new_number_of_customer = (number_of_customer_first_month * Math.pow( 1 + growth / 100, i) * Math.pow( 1 - churn / 100, i));
                         let current_month_revenue = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
-                        new_income_data_points.push(Math.floor(current_month_revenue));
+                        new_income_data_points.push(Math.floor(current_month_revenue - monthly_outflow));
             
                         let new_equity = ownership / 100 * valuation_multiple * new_number_of_customer * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer);
                         equity_data_points.push(Math.floor(new_equity));
