@@ -1,5 +1,7 @@
 <script>
     import Chart from 'chart.js';
+    Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontSize = 17;
     import { onMount } from 'svelte';
 
     let monthly_income = 4000;
@@ -19,18 +21,19 @@
 	let valuation_metric = "arpa";
 	let equity;
 	let canvas;
+	let chart = null;
 
-	let saving_data_points;
-	let old_income_data_points;
-	let new_income_data_points;
-	let equity_data_points;
+	let saving_data_points  = [];
+	let old_income_data_points = [];
+	let new_income_data_points = [];
+	let equity_data_points = [];
 
 	$: {
 	    equity = Math.floor(ownership / 100 * valuation_multiple * number_of_customer_first_month * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer));
-	    saving_data_points = [];
-	    old_income_data_points = [];
-        new_income_data_points = [];
-        equity_data_points = [];
+	    saving_data_points.splice(0, saving_data_points.length);
+	    old_income_data_points.splice(0, old_income_data_points.length);
+        new_income_data_points.splice(0, new_income_data_points.length);
+        equity_data_points.splice(0, equity_data_points.length);
         let last_month_savings = savings;
         let monthly_raise = annual_raise / 12;
 
@@ -42,16 +45,14 @@
             old_income_data_points.push(Math.floor(income));
 
             let new_number_of_customer = (number_of_customer_first_month * Math.pow( 1 + growth / 100, i) * Math.pow( 1 - churn / 100, i));
-            console.log(new_number_of_customer)
             let current_month_revenue = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
-            console.log(Math.floor(current_month_revenue))
             new_income_data_points.push(Math.floor(current_month_revenue));
 
             let new_equity = ownership / 100 * valuation_multiple * new_number_of_customer * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer);
             equity_data_points.push(Math.floor(new_equity))
         }
-        renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points);
 
+        (chart) ? chart.update() : null;
     }
 
 	onMount(async() => {
@@ -59,7 +60,7 @@
     });
 
     function renderChart(saving_data_points, income_data_point, net_revenue_data_points, equity_data_points) {
-        (window.chart) ? window.chart.destroy() : null;
+        (chart) ? chart.destroy() : null;
         let labels = [];
         for (let i=1; i<saving_data_points.length; i++) {labels.push(i)}
         if (canvas) {
@@ -68,21 +69,21 @@
                 labels : labels,
                 datasets : [
                     {
-                        label: "Savings with current job",
+                        label: "Savings w/current job",
                         backgroundColor: "#667eea",
                         borderColor: "#667eea",
                         data: saving_data_points,
                         fill: false
                     },
                     {
-                        label: "Income with current job",
+                        label: "Income w/current job",
                         backgroundColor: "#000aea",
                         borderColor: "#000aea",
                         data: old_income_data_points,
                         fill: false
                     },
                     {
-                        label: "Income with new project",
+                        label: "Income w/new project",
                         backgroundColor: "#48bb78",
                         borderColor: "#48bb78",
                         data: net_revenue_data_points,
@@ -93,17 +94,29 @@
                         backgroundColor: "#f56565",
                         borderColor: "#f56565",
                         data: equity_data_points,
-                        fill: false
+                        fill: false,
+                        borderDash: [8,3],
                     }
                 ]
             };
-
-            window.chart = new Chart(ctx, {
+            chart = new Chart(ctx, {
                 type: 'line',
                 data: data,
                 options: {
-                    animation: false
-                }
+                    animation: false,
+                    scales: {
+                        xAxes: [{gridLines: {display: false}}],
+                        yAxes: [{gridLines: {display: false}}],
+                    },
+                    tooltips: {
+                        intersect: true
+                    },
+                    elements: {
+                        point:{
+                            radius: 3
+                        }
+                    }
+                },
             });
 
         }
