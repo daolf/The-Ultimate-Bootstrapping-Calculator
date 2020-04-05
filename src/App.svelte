@@ -26,7 +26,10 @@
 	let saving_data_points  = [];
 	let old_income_data_points = [];
 	let new_income_data_points = [];
+	let new_savings_data_points = [];
 	let equity_data_points = [];
+
+	let month_to_reached_data = {};
 
 	$: {
 	    equity = Math.floor(ownership / 100 * valuation_multiple * number_of_customer_first_month * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer));
@@ -34,32 +37,66 @@
 	    old_income_data_points.splice(0, old_income_data_points.length);
         new_income_data_points.splice(0, new_income_data_points.length);
         equity_data_points.splice(0, equity_data_points.length);
+        new_savings_data_points.splice(0, new_savings_data_points.length);
+
         let last_month_savings = savings;
+        let last_month_new_savings = savings;
         let monthly_raise = annual_raise / 12;
 
-	    for (let i=0; i<=36; i++) {
+        month_to_reached_data = {
+            old_salary_reached: null,
+            old_salary_with_raise_reached: null,
+            profitability: null,
+            salary_covering_expense: null,
+            old_savings_reached: null,
+            old_savings_with_raise_reached: null
+        };
 
+	    for (let i=0; i<=36; i++) {
 	        let income = monthly_income * Math.pow( 1 + monthly_raise / 100, i);
-            saving_data_points.push(Math.floor(last_month_savings + ( income - monthly_outflow)));
-            last_month_savings += ( income - monthly_outflow);
             old_income_data_points.push(Math.floor(income));
 
+            let old_savings = Math.floor(last_month_savings + ( income - monthly_outflow))
+            saving_data_points.push(old_savings);
+            last_month_savings += ( income - monthly_outflow);
+
             let new_number_of_customer = (number_of_customer_first_month * Math.pow( 1 + growth / 100, i) * Math.pow( 1 - churn / 100, i));
-            let current_month_revenue = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
-            new_income_data_points.push(Math.floor(current_month_revenue - monthly_outflow));
+            let new_income = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
+            new_income_data_points.push(Math.floor(new_income));
 
             let new_equity = ownership / 100 * valuation_multiple * new_number_of_customer * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer);
-            equity_data_points.push(Math.floor(new_equity))
+            equity_data_points.push(Math.floor(new_equity));
+
+            let new_savings = last_month_new_savings + new_income - monthly_outflow;
+            new_savings_data_points.push(Math.floor(new_savings));
+            last_month_new_savings += (new_income - monthly_outflow);
+
+            if (new_income > old_income_data_points[0] && !month_to_reached_data["old_salary_reached"]) {month_to_reached_data["old_salary_reached"] = i + 1}
+            if (new_income > income && !month_to_reached_data["old_salary_with_raise_reached"]) {month_to_reached_data["old_salary_with_raise_reached"] = i + 1}
+            if (new_income > 0 && !month_to_reached_data["profitability"]) {month_to_reached_data["profitability"] = i + 1}
+            if (new_income > monthly_outflow && !month_to_reached_data["salary_covering_expense"]) {month_to_reached_data["salary_covering_expense"] = i + 1}
+            if (new_income > monthly_outflow && !month_to_reached_data["salary_covering_expense"]) {month_to_reached_data["salary_covering_expense"] = i + 1}
+            if (new_savings > saving_data_points[0] && !month_to_reached_data["old_savings_reached"]) {month_to_reached_data["old_savings_reached"] = i + 1}
+            if (new_savings > old_savings && !month_to_reached_data["old_savings_with_raise_reached"]) {month_to_reached_data["old_savings_with_raise_reached"] = i + 1}
+
         }
 
         (chart) ? chart.update() : null;
+
+
     }
 
 	onMount(async() => {
-	    renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points);
+	    renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points, new_savings_data_points);
     });
 
-    function renderChart(saving_data_points, income_data_point, net_revenue_data_points, equity_data_points) {
+    function renderChart(
+        saving_data_points,
+        income_data_point,
+        net_revenue_data_points,
+        equity_data_points,
+        new_savings_data_points
+    ) {
         (chart) ? chart.destroy() : null;
         let labels = [];
         for (let i=1; i<saving_data_points.length; i++) {labels.push(i)}
@@ -73,21 +110,28 @@
                         backgroundColor: "#667eea",
                         borderColor: "#667eea",
                         data: saving_data_points,
-                        fill: false
+                        fill: false,
                     },
                     {
-                        label: "Net income w/current job",
+                        label: "Income w/current job",
                         backgroundColor: "#000aea",
                         borderColor: "#000aea",
                         data: old_income_data_points,
-                        fill: false
+                        fill: false,
                     },
                     {
-                        label: "Net income w/new project",
+                        label: "Savings w/new project",
+                        backgroundColor: "#6af362",
+                        borderColor: "#6af362",
+                        data: new_savings_data_points,
+                        fill: false,
+                    },
+                    {
+                        label: "Income w/new project",
                         backgroundColor: "#48bb78",
                         borderColor: "#48bb78",
                         data: net_revenue_data_points,
-                        fill: false
+                        fill: false,
                     },
                     {
                         label: "Equity",
@@ -96,6 +140,7 @@
                         data: equity_data_points,
                         fill: false,
                         borderDash: [8,3],
+                        hidden: true
                     }
                 ]
             };
@@ -124,11 +169,12 @@
                     },
                     tooltips: {
                         intersect: true,
-                        mode: 'nearest'
+                        mode: 'nearest',
+                        intersect: false
                     },
                     elements: {
                         point:{
-                            radius: 3
+                            radius: 0
                         }
                     }
                 },
@@ -183,6 +229,7 @@
                         $
                     </span>
                     </div>
+                    <input class="mt-1 block w-full" type=range bind:value={savings} min=0 max=100000>
                 </label>
             </div>
             <div class="border-2 rounded-lg border-green-500 px-5 mb-5">
@@ -305,6 +352,17 @@
             <div class="border-2 rounded-lg border-yellow-500 px-5 sticky top-10">
                 <h5>Projection: </h5>
                 <canvas bind:this={canvas} width="400" height="200"></canvas>
+                <div class="border-t-2 border-gray-500 mt-5 text-left p-8 text-xl">
+                    It will take you, <span class="font-bold">without</span> taking into account <span class="text-red-500">equity</span>:
+                    <ul class="list-disc pl-5">
+                        <li> {month_to_reached_data["old_salary_reached"] || "More than 36"} months to earn what you <span class="text-indigo-500">earn</span> right now with your <span class="text-green-500">new project</span></li>
+                        <li> {month_to_reached_data["old_salary_with_raise_reached"]|| "More than 36"} months to make up for the <span class="text-indigo-500">salary raise </span>you would have had </li>
+                        <li> {month_to_reached_data["profitability"] || "More than 36"} months to be <span class="text-green-500">profitable</span></li>
+                        <li> {month_to_reached_data["salary_covering_expense"] || "More than 36"} months to cover all your expense with your new <span class="text-green-500">salary</span></li>
+                        <li> {month_to_reached_data["old_savings_reached"] || "More than 36"} months to go back to your initial state of <span class="text-indigo-500">savings</span></li>
+                        <li> {month_to_reached_data["old_savings_with_raise_reached"] || "More than 36"} months to make up for the <span class="text-indigo-500">savings</span> you would have had </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

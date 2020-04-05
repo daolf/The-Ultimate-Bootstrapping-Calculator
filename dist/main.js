@@ -21089,12 +21089,12 @@
     const file = "src/App.svelte";
 
     function create_fragment(ctx) {
-    	var main, div24, div21, div4, h50, t1, label0, div0, span0, t3, span1, input0, t4, t5, label1, div1, span2, t7, span3, input1, t8, t9, label2, div2, span4, t11, span5, input2, t12, t13, label3, div3, span6, t15, span7, input3, t16, t17, div13, h51, t19, label4, div5, span8, t21, span9, input4, t22, label5, div6, span10, t24, span11, input5, t25, label6, div7, span12, t27, span13, input6, t28, t29, input7, t30, label7, div8, span14, t32, span15, input8, t33, t34, input9, t35, label8, div9, span16, t37, span17, input10, t38, t39, label9, div10, span18, t41, span19, input11, t42, t43, input12, t44, label10, div11, span20, t46, span21, input13, t47, t48, input14, t49, label11, div12, span22, t51, span23, input15, t52, t53, div20, h52, t55, label12, div14, span24, t57, span25, input16, t58, t59, input17, t60, label13, div15, span26, t62, div18, input18, t63, div17, select, option0, option1, t66, div16, svg, path, t67, div19, span27, t68, t69, t70, t71, div23, div22, h53, t73, canvas_1, t74, div25, t75, div26, dispose;
+    	var main, div25, div21, div4, h50, t1, label0, div0, span0, t3, span1, input0, t4, t5, label1, div1, span2, t7, span3, input1, t8, t9, label2, div2, span4, t11, span5, input2, t12, t13, label3, div3, span6, t15, span7, input3, t16, t17, input4, t18, div13, h51, t20, label4, div5, span8, t22, span9, input5, t23, label5, div6, span10, t25, span11, input6, t26, label6, div7, span12, t28, span13, input7, t29, t30, input8, t31, label7, div8, span14, t33, span15, input9, t34, t35, input10, t36, label8, div9, span16, t38, span17, input11, t39, t40, label9, div10, span18, t42, span19, input12, t43, t44, input13, t45, label10, div11, span20, t47, span21, input14, t48, t49, input15, t50, label11, div12, span22, t52, span23, input16, t53, t54, div20, h52, t56, label12, div14, span24, t58, span25, input17, t59, t60, input18, t61, label13, div15, span26, t63, div18, input19, t64, div17, select, option0, option1, t67, div16, svg, path, t68, div19, span27, t69, t70, t71, t72, div24, div23, h53, t74, canvas_1, t75, div22, t76, span28, t78, span29, t80, ul, li0, t81_value = ctx.month_to_reached_data["old_salary_reached"] || "More than 36", t81, t82, span30, t84, span31, t86, li1, t87_value = ctx.month_to_reached_data["old_salary_with_raise_reached"]|| "More than 36", t87, t88, span32, t90, t91, li2, t92_value = ctx.month_to_reached_data["profitability"] || "More than 36", t92, t93, span33, t95, li3, t96_value = ctx.month_to_reached_data["salary_covering_expense"] || "More than 36", t96, t97, span34, t99, li4, t100_value = ctx.month_to_reached_data["old_savings_reached"] || "More than 36", t100, t101, span35, t103, li5, t104_value = ctx.month_to_reached_data["old_savings_with_raise_reached"] || "More than 36", t104, t105, span36, t107, t108, div26, t109, div27, dispose;
 
     	return {
     		c: function create() {
     			main = element("main");
-    			div24 = element("div");
+    			div25 = element("div");
     			div21 = element("div");
     			div4 = element("div");
     			h50 = element("h5");
@@ -21136,393 +21136,480 @@
     			input3 = element("input");
     			t16 = text("\n                        $");
     			t17 = space();
+    			input4 = element("input");
+    			t18 = space();
     			div13 = element("div");
     			h51 = element("h5");
     			h51.textContent = "Revenue Prevision:";
-    			t19 = space();
+    			t20 = space();
     			label4 = element("label");
     			div5 = element("div");
     			span8 = element("span");
     			span8.textContent = "📅 Month until first customer:";
-    			t21 = space();
-    			span9 = element("span");
-    			input4 = element("input");
     			t22 = space();
+    			span9 = element("span");
+    			input5 = element("input");
+    			t23 = space();
     			label5 = element("label");
     			div6 = element("div");
     			span10 = element("span");
     			span10.textContent = "🤝 Number of customers first month:";
-    			t24 = space();
-    			span11 = element("span");
-    			input5 = element("input");
     			t25 = space();
+    			span11 = element("span");
+    			input6 = element("input");
+    			t26 = space();
     			label6 = element("label");
     			div7 = element("div");
     			span12 = element("span");
     			span12.textContent = "⬇️ Revenue per Customer:";
-    			t27 = space();
+    			t28 = space();
     			span13 = element("span");
-    			input6 = element("input");
-    			t28 = text("\n                        $/mo");
-    			t29 = space();
     			input7 = element("input");
+    			t29 = text("\n                        $/mo");
     			t30 = space();
+    			input8 = element("input");
+    			t31 = space();
     			label7 = element("label");
     			div8 = element("div");
     			span14 = element("span");
     			span14.textContent = "⬆️ Cost per Customer:";
-    			t32 = space();
+    			t33 = space();
     			span15 = element("span");
-    			input8 = element("input");
-    			t33 = text("\n                        $/mo");
-    			t34 = space();
     			input9 = element("input");
+    			t34 = text("\n                        $/mo");
     			t35 = space();
+    			input10 = element("input");
+    			t36 = space();
     			label8 = element("label");
     			div9 = element("div");
     			span16 = element("span");
     			span16.textContent = "💸 Fixed Cost:";
-    			t37 = space();
+    			t38 = space();
     			span17 = element("span");
-    			input10 = element("input");
-    			t38 = text("\n                        $/mo");
-    			t39 = space();
+    			input11 = element("input");
+    			t39 = text("\n                        $/mo");
+    			t40 = space();
     			label9 = element("label");
     			div10 = element("div");
     			span18 = element("span");
     			span18.textContent = "🚀 Growth:";
-    			t41 = space();
+    			t42 = space();
     			span19 = element("span");
-    			input11 = element("input");
-    			t42 = text("\n                        %/mo");
-    			t43 = space();
     			input12 = element("input");
+    			t43 = text("\n                        %/mo");
     			t44 = space();
+    			input13 = element("input");
+    			t45 = space();
     			label10 = element("label");
     			div11 = element("div");
     			span20 = element("span");
     			span20.textContent = "💔 Churn:";
-    			t46 = space();
+    			t47 = space();
     			span21 = element("span");
-    			input13 = element("input");
-    			t47 = text("\n                        %/mo");
-    			t48 = space();
     			input14 = element("input");
+    			t48 = text("\n                        %/mo");
     			t49 = space();
+    			input15 = element("input");
+    			t50 = space();
     			label11 = element("label");
     			div12 = element("div");
     			span22 = element("span");
     			span22.textContent = "👛 Part of net revenue in salary:";
-    			t51 = space();
+    			t52 = space();
     			span23 = element("span");
-    			input15 = element("input");
-    			t52 = text("\n                        %");
-    			t53 = space();
+    			input16 = element("input");
+    			t53 = text("\n                        %");
+    			t54 = space();
     			div20 = element("div");
     			h52 = element("h5");
     			h52.textContent = "Equity:";
-    			t55 = space();
+    			t56 = space();
     			label12 = element("label");
     			div14 = element("div");
     			span24 = element("span");
     			span24.textContent = "😎 Ownership:";
-    			t57 = space();
+    			t58 = space();
     			span25 = element("span");
-    			input16 = element("input");
-    			t58 = text("\n                        %");
-    			t59 = space();
     			input17 = element("input");
+    			t59 = text("\n                        %");
     			t60 = space();
+    			input18 = element("input");
+    			t61 = space();
     			label13 = element("label");
     			div15 = element("div");
     			span26 = element("span");
     			span26.textContent = "🤞 Calculation Method";
-    			t62 = space();
+    			t63 = space();
     			div18 = element("div");
-    			input18 = element("input");
-    			t63 = text("\n                        ⨉\n                        ");
+    			input19 = element("input");
+    			t64 = text("\n                        ⨉\n                        ");
     			div17 = element("div");
     			select = element("select");
     			option0 = element("option");
     			option0.textContent = "Monthly Revenue\n                                ";
     			option1 = element("option");
     			option1.textContent = "Monthly Margin";
-    			t66 = space();
+    			t67 = space();
     			div16 = element("div");
     			svg = svg_element("svg");
     			path = svg_element("path");
-    			t67 = space();
+    			t68 = space();
     			div19 = element("div");
     			span27 = element("span");
-    			t68 = text("= ");
-    			t69 = text(ctx.equity);
-    			t70 = text("$ (for first month)");
-    			t71 = space();
+    			t69 = text("= ");
+    			t70 = text(ctx.equity);
+    			t71 = text("$ (for first month)");
+    			t72 = space();
+    			div24 = element("div");
     			div23 = element("div");
-    			div22 = element("div");
     			h53 = element("h5");
     			h53.textContent = "Projection:";
-    			t73 = space();
-    			canvas_1 = element("canvas");
     			t74 = space();
-    			div25 = element("div");
+    			canvas_1 = element("canvas");
     			t75 = space();
+    			div22 = element("div");
+    			t76 = text("It will take you, ");
+    			span28 = element("span");
+    			span28.textContent = "without";
+    			t78 = text(" taking into account ");
+    			span29 = element("span");
+    			span29.textContent = "equity";
+    			t80 = text(":\n                    ");
+    			ul = element("ul");
+    			li0 = element("li");
+    			t81 = text(t81_value);
+    			t82 = text(" months to earn what you ");
+    			span30 = element("span");
+    			span30.textContent = "earn";
+    			t84 = text(" right now with your ");
+    			span31 = element("span");
+    			span31.textContent = "new project";
+    			t86 = space();
+    			li1 = element("li");
+    			t87 = text(t87_value);
+    			t88 = text(" months to make up for the ");
+    			span32 = element("span");
+    			span32.textContent = "salary raise ";
+    			t90 = text("you would have had");
+    			t91 = space();
+    			li2 = element("li");
+    			t92 = text(t92_value);
+    			t93 = text(" months to be ");
+    			span33 = element("span");
+    			span33.textContent = "profitable";
+    			t95 = space();
+    			li3 = element("li");
+    			t96 = text(t96_value);
+    			t97 = text(" months to cover all your expense with your new ");
+    			span34 = element("span");
+    			span34.textContent = "salary";
+    			t99 = space();
+    			li4 = element("li");
+    			t100 = text(t100_value);
+    			t101 = text(" months to go back to your initial state of ");
+    			span35 = element("span");
+    			span35.textContent = "savings";
+    			t103 = space();
+    			li5 = element("li");
+    			t104 = text(t104_value);
+    			t105 = text(" months to make up for the ");
+    			span36 = element("span");
+    			span36.textContent = "savings";
+    			t107 = text(" you would have had");
+    			t108 = space();
     			div26 = element("div");
-    			add_location(h50, file, 147, 16, 5604);
+    			t109 = space();
+    			div27 = element("div");
+    			add_location(h50, file, 193, 16, 7870);
     			span0.className = "text-gray-700";
-    			add_location(span0, file, 150, 24, 5720);
+    			add_location(span0, file, 196, 24, 7986);
     			input0.className = "w-auto";
     			attr(input0, "type", "number");
     			input0.min = "100";
     			input0.max = "100000";
-    			add_location(input0, file, 152, 24, 5820);
-    			add_location(span1, file, 151, 24, 5789);
+    			add_location(input0, file, 198, 24, 8086);
+    			add_location(span1, file, 197, 24, 8055);
     			div0.className = "flex";
-    			add_location(div0, file, 149, 20, 5677);
-    			add_location(label0, file, 148, 16, 5649);
+    			add_location(div0, file, 195, 20, 7943);
+    			add_location(label0, file, 194, 16, 7915);
     			span2.className = "text-gray-700";
-    			add_location(span2, file, 159, 24, 6102);
+    			add_location(span2, file, 205, 24, 8368);
     			input1.className = "w-auto";
     			attr(input1, "type", "number");
     			input1.min = "100";
     			input1.max = "100000";
-    			add_location(input1, file, 161, 24, 6203);
-    			add_location(span3, file, 160, 24, 6172);
+    			add_location(input1, file, 207, 24, 8469);
+    			add_location(span3, file, 206, 24, 8438);
     			div1.className = "flex";
-    			add_location(div1, file, 158, 20, 6059);
-    			add_location(label1, file, 157, 16, 6031);
+    			add_location(div1, file, 204, 20, 8325);
+    			add_location(label1, file, 203, 16, 8297);
     			span4.className = "text-gray-700";
-    			add_location(span4, file, 168, 24, 6486);
+    			add_location(span4, file, 214, 24, 8752);
     			input2.className = "w-auto";
     			attr(input2, "type", "number");
     			input2.min = "0";
     			input2.max = "100";
-    			add_location(input2, file, 170, 24, 6597);
-    			add_location(span5, file, 169, 24, 6566);
+    			add_location(input2, file, 216, 24, 8863);
+    			add_location(span5, file, 215, 24, 8832);
     			div2.className = "flex";
-    			add_location(div2, file, 167, 20, 6443);
-    			add_location(label2, file, 166, 16, 6415);
+    			add_location(div2, file, 213, 20, 8709);
+    			add_location(label2, file, 212, 16, 8681);
     			span6.className = "text-gray-700";
-    			add_location(span6, file, 177, 24, 6869);
+    			add_location(span6, file, 223, 24, 9135);
     			input3.className = "w-auto";
     			attr(input3, "type", "number");
     			input3.min = "0";
     			input3.max = "1000000";
-    			add_location(input3, file, 179, 24, 6971);
-    			add_location(span7, file, 178, 24, 6940);
+    			add_location(input3, file, 225, 24, 9237);
+    			add_location(span7, file, 224, 24, 9206);
     			div3.className = "flex";
-    			add_location(div3, file, 176, 20, 6826);
-    			add_location(label3, file, 175, 16, 6798);
-    			div4.className = "border-2 rounded-lg border-indigo-500 px-5 mb-5";
-    			add_location(div4, file, 146, 12, 5526);
-    			add_location(h51, file, 186, 16, 7259);
-    			span8.className = "text-gray-700";
-    			add_location(span8, file, 189, 24, 7376);
-    			input4.className = "w-auto";
-    			attr(input4, "type", "number");
+    			add_location(div3, file, 222, 20, 9092);
+    			input4.className = "mt-1 block w-full";
+    			attr(input4, "type", "range");
     			input4.min = "0";
-    			input4.max = "24";
-    			add_location(input4, file, 191, 24, 7497);
-    			add_location(span9, file, 190, 24, 7466);
-    			div5.className = "flex";
-    			add_location(div5, file, 188, 20, 7333);
-    			add_location(label4, file, 187, 16, 7305);
-    			span10.className = "text-gray-700";
-    			add_location(span10, file, 197, 24, 7747);
+    			input4.max = "100000";
+    			add_location(input4, file, 229, 20, 9412);
+    			add_location(label3, file, 221, 16, 9064);
+    			div4.className = "border-2 rounded-lg border-indigo-500 px-5 mb-5";
+    			add_location(div4, file, 192, 12, 7792);
+    			add_location(h51, file, 233, 16, 9628);
+    			span8.className = "text-gray-700";
+    			add_location(span8, file, 236, 24, 9745);
     			input5.className = "w-auto";
     			attr(input5, "type", "number");
     			input5.min = "0";
-    			input5.max = "100";
-    			add_location(input5, file, 199, 24, 7873);
-    			add_location(span11, file, 198, 24, 7842);
-    			div6.className = "flex";
-    			add_location(div6, file, 196, 20, 7704);
-    			add_location(label5, file, 195, 16, 7676);
-    			span12.className = "text-gray-700";
-    			add_location(span12, file, 205, 24, 8133);
+    			input5.max = "24";
+    			add_location(input5, file, 238, 24, 9866);
+    			add_location(span9, file, 237, 24, 9835);
+    			div5.className = "flex";
+    			add_location(div5, file, 235, 20, 9702);
+    			add_location(label4, file, 234, 16, 9674);
+    			span10.className = "text-gray-700";
+    			add_location(span10, file, 244, 24, 10116);
     			input6.className = "w-auto";
     			attr(input6, "type", "number");
     			input6.min = "0";
-    			input6.max = "1000";
-    			add_location(input6, file, 207, 24, 8248);
-    			add_location(span13, file, 206, 24, 8217);
-    			div7.className = "flex";
-    			add_location(div7, file, 204, 20, 8090);
-    			input7.className = "mt-1 block w-full";
-    			attr(input7, "type", "range");
+    			input6.max = "100";
+    			add_location(input6, file, 246, 24, 10242);
+    			add_location(span11, file, 245, 24, 10211);
+    			div6.className = "flex";
+    			add_location(div6, file, 243, 20, 10073);
+    			add_location(label5, file, 242, 16, 10045);
+    			span12.className = "text-gray-700";
+    			add_location(span12, file, 252, 24, 10502);
+    			input7.className = "w-auto";
+    			attr(input7, "type", "number");
     			input7.min = "0";
     			input7.max = "1000";
-    			add_location(input7, file, 211, 20, 8420);
-    			add_location(label6, file, 203, 16, 8062);
-    			span14.className = "text-gray-700";
-    			add_location(span14, file, 215, 24, 8610);
-    			input8.className = "w-auto";
-    			attr(input8, "type", "number");
+    			add_location(input7, file, 254, 24, 10617);
+    			add_location(span13, file, 253, 24, 10586);
+    			div7.className = "flex";
+    			add_location(div7, file, 251, 20, 10459);
+    			input8.className = "mt-1 block w-full";
+    			attr(input8, "type", "range");
     			input8.min = "0";
     			input8.max = "1000";
-    			add_location(input8, file, 217, 24, 8722);
-    			add_location(span15, file, 216, 24, 8691);
-    			div8.className = "flex";
-    			add_location(div8, file, 214, 20, 8567);
-    			input9.className = "mt-1 block w-full";
-    			attr(input9, "type", "range");
+    			add_location(input8, file, 258, 20, 10789);
+    			add_location(label6, file, 250, 16, 10431);
+    			span14.className = "text-gray-700";
+    			add_location(span14, file, 262, 24, 10979);
+    			input9.className = "w-auto";
+    			attr(input9, "type", "number");
     			input9.min = "0";
     			input9.max = "1000";
-    			add_location(input9, file, 221, 20, 8907);
-    			add_location(label7, file, 213, 16, 8539);
-    			span16.className = "text-gray-700";
-    			add_location(span16, file, 225, 24, 9110);
-    			input10.className = "w-auto";
-    			attr(input10, "type", "number");
+    			add_location(input9, file, 264, 24, 11091);
+    			add_location(span15, file, 263, 24, 11060);
+    			div8.className = "flex";
+    			add_location(div8, file, 261, 20, 10936);
+    			input10.className = "mt-1 block w-full";
+    			attr(input10, "type", "range");
     			input10.min = "0";
-    			input10.max = "100000";
-    			add_location(input10, file, 227, 24, 9215);
-    			add_location(span17, file, 226, 24, 9184);
-    			div9.className = "flex";
-    			add_location(div9, file, 224, 20, 9067);
-    			add_location(label8, file, 223, 16, 9039);
-    			span18.className = "text-gray-700";
-    			add_location(span18, file, 234, 24, 9487);
+    			input10.max = "1000";
+    			add_location(input10, file, 268, 20, 11276);
+    			add_location(label7, file, 260, 16, 10908);
+    			span16.className = "text-gray-700";
+    			add_location(span16, file, 272, 24, 11479);
     			input11.className = "w-auto";
     			attr(input11, "type", "number");
     			input11.min = "0";
-    			input11.max = "100";
-    			add_location(input11, file, 236, 24, 9588);
-    			add_location(span19, file, 235, 24, 9557);
-    			div10.className = "flex";
-    			add_location(div10, file, 233, 20, 9444);
-    			input12.className = "mt-1 block w-full";
-    			attr(input12, "type", "range");
+    			input11.max = "100000";
+    			add_location(input11, file, 274, 24, 11584);
+    			add_location(span17, file, 273, 24, 11553);
+    			div9.className = "flex";
+    			add_location(div9, file, 271, 20, 11436);
+    			add_location(label8, file, 270, 16, 11408);
+    			span18.className = "text-gray-700";
+    			add_location(span18, file, 281, 24, 11856);
+    			input12.className = "w-auto";
+    			attr(input12, "type", "number");
     			input12.min = "0";
     			input12.max = "100";
-    			add_location(input12, file, 240, 20, 9761);
-    			add_location(label9, file, 232, 16, 9416);
-    			span20.className = "text-gray-700";
-    			add_location(span20, file, 244, 24, 9952);
-    			input13.className = "w-auto";
-    			attr(input13, "type", "number");
+    			add_location(input12, file, 283, 24, 11957);
+    			add_location(span19, file, 282, 24, 11926);
+    			div10.className = "flex";
+    			add_location(div10, file, 280, 20, 11813);
+    			input13.className = "mt-1 block w-full";
+    			attr(input13, "type", "range");
     			input13.min = "0";
     			input13.max = "100";
-    			add_location(input13, file, 246, 24, 10052);
-    			add_location(span21, file, 245, 24, 10021);
-    			div11.className = "flex";
-    			add_location(div11, file, 243, 20, 9909);
-    			input14.className = "mt-1 block w-full";
-    			attr(input14, "type", "range");
+    			add_location(input13, file, 287, 20, 12130);
+    			add_location(label9, file, 279, 16, 11785);
+    			span20.className = "text-gray-700";
+    			add_location(span20, file, 291, 24, 12321);
+    			input14.className = "w-auto";
+    			attr(input14, "type", "number");
     			input14.min = "0";
     			input14.max = "100";
-    			add_location(input14, file, 250, 20, 10224);
-    			add_location(label10, file, 242, 16, 9881);
-    			span22.className = "text-gray-700";
-    			add_location(span22, file, 254, 24, 10414);
-    			input15.className = "w-auto";
-    			attr(input15, "type", "number");
+    			add_location(input14, file, 293, 24, 12421);
+    			add_location(span21, file, 292, 24, 12390);
+    			div11.className = "flex";
+    			add_location(div11, file, 290, 20, 12278);
+    			input15.className = "mt-1 block w-full";
+    			attr(input15, "type", "range");
     			input15.min = "0";
     			input15.max = "100";
-    			add_location(input15, file, 256, 24, 10538);
-    			add_location(span23, file, 255, 24, 10507);
-    			div12.className = "flex";
-    			add_location(div12, file, 253, 20, 10371);
-    			add_location(label11, file, 252, 16, 10343);
-    			div13.className = "border-2 rounded-lg border-green-500 px-5 mb-5";
-    			add_location(div13, file, 185, 12, 7182);
-    			add_location(h52, file, 263, 16, 10835);
-    			span24.className = "text-gray-700";
-    			add_location(span24, file, 266, 24, 10955);
+    			add_location(input15, file, 297, 20, 12593);
+    			add_location(label10, file, 289, 16, 12250);
+    			span22.className = "text-gray-700";
+    			add_location(span22, file, 301, 24, 12783);
     			input16.className = "w-auto";
     			attr(input16, "type", "number");
     			input16.min = "0";
     			input16.max = "100";
-    			add_location(input16, file, 268, 24, 11059);
-    			add_location(span25, file, 267, 24, 11028);
-    			div14.className = "flex";
-    			add_location(div14, file, 265, 20, 10912);
-    			input17.className = "mt-1 block w-full";
-    			attr(input17, "type", "range");
+    			add_location(input16, file, 303, 24, 12907);
+    			add_location(span23, file, 302, 24, 12876);
+    			div12.className = "flex";
+    			add_location(div12, file, 300, 20, 12740);
+    			add_location(label11, file, 299, 16, 12712);
+    			div13.className = "border-2 rounded-lg border-green-500 px-5 mb-5";
+    			add_location(div13, file, 232, 12, 9551);
+    			add_location(h52, file, 310, 16, 13204);
+    			span24.className = "text-gray-700";
+    			add_location(span24, file, 313, 24, 13324);
+    			input17.className = "w-auto";
+    			attr(input17, "type", "number");
     			input17.min = "0";
     			input17.max = "100";
-    			add_location(input17, file, 272, 20, 11232);
-    			label12.className = "block";
-    			add_location(label12, file, 264, 16, 10870);
-    			span26.className = "text-gray-700";
-    			add_location(span26, file, 276, 24, 11445);
-    			div15.className = "flex mb-5";
-    			add_location(div15, file, 275, 20, 11397);
-    			input18.className = "w-auto";
-    			attr(input18, "type", "number");
+    			add_location(input17, file, 315, 24, 13428);
+    			add_location(span25, file, 314, 24, 13397);
+    			div14.className = "flex";
+    			add_location(div14, file, 312, 20, 13281);
+    			input18.className = "mt-1 block w-full";
+    			attr(input18, "type", "range");
     			input18.min = "0";
     			input18.max = "100";
-    			add_location(input18, file, 279, 24, 11593);
+    			add_location(input18, file, 319, 20, 13601);
+    			label12.className = "block";
+    			add_location(label12, file, 311, 16, 13239);
+    			span26.className = "text-gray-700";
+    			add_location(span26, file, 323, 24, 13814);
+    			div15.className = "flex mb-5";
+    			add_location(div15, file, 322, 20, 13766);
+    			input19.className = "w-auto";
+    			attr(input19, "type", "number");
+    			input19.min = "0";
+    			input19.max = "100";
+    			add_location(input19, file, 326, 24, 13962);
     			option0.__value = "arpa";
     			option0.value = option0.__value;
-    			add_location(option0, file, 283, 32, 11846);
+    			add_location(option0, file, 330, 32, 14215);
     			option1.__value = "arpa - cost_per_customer";
     			option1.value = option1.__value;
-    			add_location(option1, file, 286, 32, 11996);
+    			add_location(option1, file, 333, 32, 14365);
     			if (ctx.valuation_metric === void 0) add_render_callback(() => ctx.select_change_handler.call(select));
-    			add_location(select, file, 282, 28, 11775);
+    			add_location(select, file, 329, 28, 14144);
     			attr(path, "d", "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z");
-    			add_location(path, file, 291, 121, 12418);
+    			add_location(path, file, 338, 121, 14787);
     			attr(svg, "class", "fill-current h-4 w-4");
     			attr(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr(svg, "viewBox", "0 0 20 20");
-    			add_location(svg, file, 291, 32, 12329);
+    			add_location(svg, file, 338, 32, 14698);
     			div16.className = "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700";
-    			add_location(div16, file, 290, 28, 12199);
+    			add_location(div16, file, 337, 28, 14568);
     			div17.className = "relative";
-    			add_location(div17, file, 281, 24, 11724);
+    			add_location(div17, file, 328, 24, 14093);
     			div18.className = "flex";
-    			add_location(div18, file, 278, 20, 11550);
-    			add_location(span27, file, 296, 24, 12679);
+    			add_location(div18, file, 325, 20, 13919);
+    			add_location(span27, file, 343, 24, 15048);
     			div19.className = "text-center mt-4";
-    			add_location(div19, file, 295, 20, 12624);
+    			add_location(div19, file, 342, 20, 14993);
     			label13.className = "block";
-    			add_location(label13, file, 274, 16, 11355);
+    			add_location(label13, file, 321, 16, 13724);
     			div20.className = "border-2 rounded-lg border-red-500 px-5 mb-5";
-    			add_location(div20, file, 262, 12, 10760);
+    			add_location(div20, file, 309, 12, 13129);
     			div21.className = "col-span-12 md:col-span-4";
-    			add_location(div21, file, 145, 8, 5474);
-    			add_location(h53, file, 303, 16, 12957);
+    			add_location(div21, file, 191, 8, 7740);
+    			add_location(h53, file, 350, 16, 15326);
     			canvas_1.width = "400";
     			canvas_1.height = "200";
-    			add_location(canvas_1, file, 304, 16, 12995);
-    			div22.className = "border-2 rounded-lg border-yellow-500 px-5 sticky top-10";
-    			add_location(div22, file, 302, 12, 12870);
-    			div23.className = "col-span-12 md:col-span-8";
-    			add_location(div23, file, 301, 8, 12818);
-    			div24.className = "grid grid-cols-12 gap-4";
-    			add_location(div24, file, 144, 4, 5428);
-    			div25.className = "min-h-64 grid grid-rows-1 grid-flow-col gap-4";
-    			add_location(div25, file, 308, 4, 13106);
-    			div26.className = "min-h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5";
-    			add_location(div26, file, 311, 4, 13182);
-    			add_location(main, file, 143, 0, 5417);
+    			add_location(canvas_1, file, 351, 16, 15364);
+    			span28.className = "font-bold";
+    			add_location(span28, file, 353, 38, 15548);
+    			span29.className = "text-red-500";
+    			add_location(span29, file, 353, 97, 15607);
+    			span30.className = "text-indigo-500";
+    			add_location(span30, file, 355, 117, 15814);
+    			span31.className = "text-green-500";
+    			add_location(span31, file, 355, 179, 15876);
+    			add_location(li0, file, 355, 24, 15721);
+    			span32.className = "text-indigo-500";
+    			add_location(span32, file, 356, 129, 16058);
+    			add_location(li1, file, 356, 24, 15953);
+    			span33.className = "text-green-500";
+    			add_location(span33, file, 357, 101, 16234);
+    			add_location(li2, file, 357, 24, 16157);
+    			span34.className = "text-green-500";
+    			add_location(span34, file, 358, 145, 16431);
+    			add_location(li3, file, 358, 24, 16310);
+    			span35.className = "text-indigo-500";
+    			add_location(span35, file, 359, 137, 16616);
+    			add_location(li4, file, 359, 24, 16503);
+    			span36.className = "text-indigo-500";
+    			add_location(span36, file, 360, 131, 16797);
+    			add_location(li5, file, 360, 24, 16690);
+    			ul.className = "list-disc pl-5";
+    			add_location(ul, file, 354, 20, 15669);
+    			div22.className = "border-t-2 border-gray-500 mt-5 text-left p-8 text-xl";
+    			add_location(div22, file, 352, 16, 15442);
+    			div23.className = "border-2 rounded-lg border-yellow-500 px-5 sticky top-10";
+    			add_location(div23, file, 349, 12, 15239);
+    			div24.className = "col-span-12 md:col-span-8";
+    			add_location(div24, file, 348, 8, 15187);
+    			div25.className = "grid grid-cols-12 gap-4";
+    			add_location(div25, file, 190, 4, 7694);
+    			div26.className = "min-h-64 grid grid-rows-1 grid-flow-col gap-4";
+    			add_location(div26, file, 366, 4, 16965);
+    			div27.className = "min-h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5";
+    			add_location(div27, file, 369, 4, 17041);
+    			add_location(main, file, 189, 0, 7683);
 
     			dispose = [
     				listen(input0, "input", ctx.input0_input_handler),
     				listen(input1, "input", ctx.input1_input_handler),
     				listen(input2, "input", ctx.input2_input_handler),
     				listen(input3, "input", ctx.input3_input_handler),
-    				listen(input4, "input", ctx.input4_input_handler),
+    				listen(input4, "change", ctx.input4_change_input_handler),
+    				listen(input4, "input", ctx.input4_change_input_handler),
     				listen(input5, "input", ctx.input5_input_handler),
     				listen(input6, "input", ctx.input6_input_handler),
-    				listen(input7, "change", ctx.input7_change_input_handler),
-    				listen(input7, "input", ctx.input7_change_input_handler),
-    				listen(input8, "input", ctx.input8_input_handler),
-    				listen(input9, "change", ctx.input9_change_input_handler),
-    				listen(input9, "input", ctx.input9_change_input_handler),
-    				listen(input10, "input", ctx.input10_input_handler),
+    				listen(input7, "input", ctx.input7_input_handler),
+    				listen(input8, "change", ctx.input8_change_input_handler),
+    				listen(input8, "input", ctx.input8_change_input_handler),
+    				listen(input9, "input", ctx.input9_input_handler),
+    				listen(input10, "change", ctx.input10_change_input_handler),
+    				listen(input10, "input", ctx.input10_change_input_handler),
     				listen(input11, "input", ctx.input11_input_handler),
-    				listen(input12, "change", ctx.input12_change_input_handler),
-    				listen(input12, "input", ctx.input12_change_input_handler),
-    				listen(input13, "input", ctx.input13_input_handler),
-    				listen(input14, "change", ctx.input14_change_input_handler),
-    				listen(input14, "input", ctx.input14_change_input_handler),
-    				listen(input15, "input", ctx.input15_input_handler),
+    				listen(input12, "input", ctx.input12_input_handler),
+    				listen(input13, "change", ctx.input13_change_input_handler),
+    				listen(input13, "input", ctx.input13_change_input_handler),
+    				listen(input14, "input", ctx.input14_input_handler),
+    				listen(input15, "change", ctx.input15_change_input_handler),
+    				listen(input15, "input", ctx.input15_change_input_handler),
     				listen(input16, "input", ctx.input16_input_handler),
-    				listen(input17, "change", ctx.input17_change_input_handler),
-    				listen(input17, "input", ctx.input17_change_input_handler),
-    				listen(input18, "input", ctx.input18_input_handler),
+    				listen(input17, "input", ctx.input17_input_handler),
+    				listen(input18, "change", ctx.input18_change_input_handler),
+    				listen(input18, "input", ctx.input18_change_input_handler),
+    				listen(input19, "input", ctx.input19_input_handler),
     				listen(select, "change", ctx.select_change_handler)
     			];
     		},
@@ -21533,8 +21620,8 @@
 
     		m: function mount(target, anchor) {
     			insert(target, main, anchor);
-    			append(main, div24);
-    			append(div24, div21);
+    			append(main, div25);
+    			append(div25, div21);
     			append(div21, div4);
     			append(div4, h50);
     			append(div4, t1);
@@ -21581,145 +21668,150 @@
     			input3.value = ctx.savings;
 
     			append(span7, t16);
-    			append(div21, t17);
+    			append(label3, t17);
+    			append(label3, input4);
+
+    			input4.value = ctx.savings;
+
+    			append(div21, t18);
     			append(div21, div13);
     			append(div13, h51);
-    			append(div13, t19);
+    			append(div13, t20);
     			append(div13, label4);
     			append(label4, div5);
     			append(div5, span8);
-    			append(div5, t21);
+    			append(div5, t22);
     			append(div5, span9);
-    			append(span9, input4);
+    			append(span9, input5);
 
-    			input4.value = ctx.month_to_first_dollar;
+    			input5.value = ctx.month_to_first_dollar;
 
-    			append(div13, t22);
+    			append(div13, t23);
     			append(div13, label5);
     			append(label5, div6);
     			append(div6, span10);
-    			append(div6, t24);
+    			append(div6, t25);
     			append(div6, span11);
-    			append(span11, input5);
+    			append(span11, input6);
 
-    			input5.value = ctx.number_of_customer_first_month;
+    			input6.value = ctx.number_of_customer_first_month;
 
-    			append(div13, t25);
+    			append(div13, t26);
     			append(div13, label6);
     			append(label6, div7);
     			append(div7, span12);
-    			append(div7, t27);
+    			append(div7, t28);
     			append(div7, span13);
-    			append(span13, input6);
-
-    			input6.value = ctx.arpa;
-
-    			append(span13, t28);
-    			append(label6, t29);
-    			append(label6, input7);
+    			append(span13, input7);
 
     			input7.value = ctx.arpa;
 
-    			append(div13, t30);
+    			append(span13, t29);
+    			append(label6, t30);
+    			append(label6, input8);
+
+    			input8.value = ctx.arpa;
+
+    			append(div13, t31);
     			append(div13, label7);
     			append(label7, div8);
     			append(div8, span14);
-    			append(div8, t32);
+    			append(div8, t33);
     			append(div8, span15);
-    			append(span15, input8);
-
-    			input8.value = ctx.cost_per_customer;
-
-    			append(span15, t33);
-    			append(label7, t34);
-    			append(label7, input9);
+    			append(span15, input9);
 
     			input9.value = ctx.cost_per_customer;
 
-    			append(div13, t35);
+    			append(span15, t34);
+    			append(label7, t35);
+    			append(label7, input10);
+
+    			input10.value = ctx.cost_per_customer;
+
+    			append(div13, t36);
     			append(div13, label8);
     			append(label8, div9);
     			append(div9, span16);
-    			append(div9, t37);
+    			append(div9, t38);
     			append(div9, span17);
-    			append(span17, input10);
+    			append(span17, input11);
 
-    			input10.value = ctx.fixed_cost;
+    			input11.value = ctx.fixed_cost;
 
-    			append(span17, t38);
-    			append(div13, t39);
+    			append(span17, t39);
+    			append(div13, t40);
     			append(div13, label9);
     			append(label9, div10);
     			append(div10, span18);
-    			append(div10, t41);
+    			append(div10, t42);
     			append(div10, span19);
-    			append(span19, input11);
-
-    			input11.value = ctx.growth;
-
-    			append(span19, t42);
-    			append(label9, t43);
-    			append(label9, input12);
+    			append(span19, input12);
 
     			input12.value = ctx.growth;
 
-    			append(div13, t44);
+    			append(span19, t43);
+    			append(label9, t44);
+    			append(label9, input13);
+
+    			input13.value = ctx.growth;
+
+    			append(div13, t45);
     			append(div13, label10);
     			append(label10, div11);
     			append(div11, span20);
-    			append(div11, t46);
+    			append(div11, t47);
     			append(div11, span21);
-    			append(span21, input13);
-
-    			input13.value = ctx.churn;
-
-    			append(span21, t47);
-    			append(label10, t48);
-    			append(label10, input14);
+    			append(span21, input14);
 
     			input14.value = ctx.churn;
 
-    			append(div13, t49);
+    			append(span21, t48);
+    			append(label10, t49);
+    			append(label10, input15);
+
+    			input15.value = ctx.churn;
+
+    			append(div13, t50);
     			append(div13, label11);
     			append(label11, div12);
     			append(div12, span22);
-    			append(div12, t51);
+    			append(div12, t52);
     			append(div12, span23);
-    			append(span23, input15);
+    			append(span23, input16);
 
-    			input15.value = ctx.part_of_revenue_income;
+    			input16.value = ctx.part_of_revenue_income;
 
-    			append(span23, t52);
-    			append(div21, t53);
+    			append(span23, t53);
+    			append(div21, t54);
     			append(div21, div20);
     			append(div20, h52);
-    			append(div20, t55);
+    			append(div20, t56);
     			append(div20, label12);
     			append(label12, div14);
     			append(div14, span24);
-    			append(div14, t57);
+    			append(div14, t58);
     			append(div14, span25);
-    			append(span25, input16);
-
-    			input16.value = ctx.ownership;
-
-    			append(span25, t58);
-    			append(label12, t59);
-    			append(label12, input17);
+    			append(span25, input17);
 
     			input17.value = ctx.ownership;
 
-    			append(div20, t60);
+    			append(span25, t59);
+    			append(label12, t60);
+    			append(label12, input18);
+
+    			input18.value = ctx.ownership;
+
+    			append(div20, t61);
     			append(div20, label13);
     			append(label13, div15);
     			append(div15, span26);
-    			append(label13, t62);
+    			append(label13, t63);
     			append(label13, div18);
-    			append(div18, input18);
+    			append(div18, input19);
 
-    			input18.value = ctx.valuation_multiple;
+    			input19.value = ctx.valuation_multiple;
 
-    			append(div18, t63);
+    			append(div18, t64);
     			append(div18, div17);
     			append(div17, select);
     			append(select, option0);
@@ -21727,27 +21819,68 @@
 
     			select_option(select, ctx.valuation_metric);
 
-    			append(div17, t66);
+    			append(div17, t67);
     			append(div17, div16);
     			append(div16, svg);
     			append(svg, path);
-    			append(label13, t67);
+    			append(label13, t68);
     			append(label13, div19);
     			append(div19, span27);
-    			append(span27, t68);
     			append(span27, t69);
     			append(span27, t70);
-    			append(div24, t71);
+    			append(span27, t71);
+    			append(div25, t72);
+    			append(div25, div24);
     			append(div24, div23);
-    			append(div23, div22);
-    			append(div22, h53);
-    			append(div22, t73);
-    			append(div22, canvas_1);
+    			append(div23, h53);
+    			append(div23, t74);
+    			append(div23, canvas_1);
     			add_binding_callback(() => ctx.canvas_1_binding(canvas_1, null));
-    			append(main, t74);
-    			append(main, div25);
-    			append(main, t75);
+    			append(div23, t75);
+    			append(div23, div22);
+    			append(div22, t76);
+    			append(div22, span28);
+    			append(div22, t78);
+    			append(div22, span29);
+    			append(div22, t80);
+    			append(div22, ul);
+    			append(ul, li0);
+    			append(li0, t81);
+    			append(li0, t82);
+    			append(li0, span30);
+    			append(li0, t84);
+    			append(li0, span31);
+    			append(ul, t86);
+    			append(ul, li1);
+    			append(li1, t87);
+    			append(li1, t88);
+    			append(li1, span32);
+    			append(li1, t90);
+    			append(ul, t91);
+    			append(ul, li2);
+    			append(li2, t92);
+    			append(li2, t93);
+    			append(li2, span33);
+    			append(ul, t95);
+    			append(ul, li3);
+    			append(li3, t96);
+    			append(li3, t97);
+    			append(li3, span34);
+    			append(ul, t99);
+    			append(ul, li4);
+    			append(li4, t100);
+    			append(li4, t101);
+    			append(li4, span35);
+    			append(ul, t103);
+    			append(ul, li5);
+    			append(li5, t104);
+    			append(li5, t105);
+    			append(li5, span36);
+    			append(li5, t107);
+    			append(main, t108);
     			append(main, div26);
+    			append(main, t109);
+    			append(main, div27);
     		},
 
     		p: function update(changed, ctx) {
@@ -21755,30 +21888,55 @@
     			if (changed.monthly_outflow) input1.value = ctx.monthly_outflow;
     			if (changed.annual_raise) input2.value = ctx.annual_raise;
     			if (changed.savings) input3.value = ctx.savings;
-    			if (changed.month_to_first_dollar) input4.value = ctx.month_to_first_dollar;
-    			if (changed.number_of_customer_first_month) input5.value = ctx.number_of_customer_first_month;
-    			if (changed.arpa) input6.value = ctx.arpa;
+    			if (changed.savings) input4.value = ctx.savings;
+    			if (changed.month_to_first_dollar) input5.value = ctx.month_to_first_dollar;
+    			if (changed.number_of_customer_first_month) input6.value = ctx.number_of_customer_first_month;
     			if (changed.arpa) input7.value = ctx.arpa;
-    			if (changed.cost_per_customer) input8.value = ctx.cost_per_customer;
+    			if (changed.arpa) input8.value = ctx.arpa;
     			if (changed.cost_per_customer) input9.value = ctx.cost_per_customer;
-    			if (changed.fixed_cost) input10.value = ctx.fixed_cost;
-    			if (changed.growth) input11.value = ctx.growth;
+    			if (changed.cost_per_customer) input10.value = ctx.cost_per_customer;
+    			if (changed.fixed_cost) input11.value = ctx.fixed_cost;
     			if (changed.growth) input12.value = ctx.growth;
-    			if (changed.churn) input13.value = ctx.churn;
+    			if (changed.growth) input13.value = ctx.growth;
     			if (changed.churn) input14.value = ctx.churn;
-    			if (changed.part_of_revenue_income) input15.value = ctx.part_of_revenue_income;
-    			if (changed.ownership) input16.value = ctx.ownership;
+    			if (changed.churn) input15.value = ctx.churn;
+    			if (changed.part_of_revenue_income) input16.value = ctx.part_of_revenue_income;
     			if (changed.ownership) input17.value = ctx.ownership;
-    			if (changed.valuation_multiple) input18.value = ctx.valuation_multiple;
+    			if (changed.ownership) input18.value = ctx.ownership;
+    			if (changed.valuation_multiple) input19.value = ctx.valuation_multiple;
     			if (changed.valuation_metric) select_option(select, ctx.valuation_metric);
 
     			if (changed.equity) {
-    				set_data(t69, ctx.equity);
+    				set_data(t70, ctx.equity);
     			}
 
     			if (changed.items) {
     				ctx.canvas_1_binding(null, canvas_1);
     				ctx.canvas_1_binding(canvas_1, null);
+    			}
+
+    			if ((changed.month_to_reached_data) && t81_value !== (t81_value = ctx.month_to_reached_data["old_salary_reached"] || "More than 36")) {
+    				set_data(t81, t81_value);
+    			}
+
+    			if ((changed.month_to_reached_data) && t87_value !== (t87_value = ctx.month_to_reached_data["old_salary_with_raise_reached"]|| "More than 36")) {
+    				set_data(t87, t87_value);
+    			}
+
+    			if ((changed.month_to_reached_data) && t92_value !== (t92_value = ctx.month_to_reached_data["profitability"] || "More than 36")) {
+    				set_data(t92, t92_value);
+    			}
+
+    			if ((changed.month_to_reached_data) && t96_value !== (t96_value = ctx.month_to_reached_data["salary_covering_expense"] || "More than 36")) {
+    				set_data(t96, t96_value);
+    			}
+
+    			if ((changed.month_to_reached_data) && t100_value !== (t100_value = ctx.month_to_reached_data["old_savings_reached"] || "More than 36")) {
+    				set_data(t100, t100_value);
+    			}
+
+    			if ((changed.month_to_reached_data) && t104_value !== (t104_value = ctx.month_to_reached_data["old_savings_with_raise_reached"] || "More than 36")) {
+    				set_data(t104, t104_value);
     			}
     		},
 
@@ -21822,13 +21980,22 @@
     	let saving_data_points  = [];
     	let old_income_data_points = [];
     	let new_income_data_points = [];
+    	let new_savings_data_points = [];
     	let equity_data_points = [];
 
+    	let month_to_reached_data = {};
+
     	onMount(async() => {
-    	    renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points);
+    	    renderChart(saving_data_points, old_income_data_points, new_income_data_points, equity_data_points, new_savings_data_points);
         });
 
-        function renderChart(saving_data_points, income_data_point, net_revenue_data_points, equity_data_points) {
+        function renderChart(
+            saving_data_points,
+            income_data_point,
+            net_revenue_data_points,
+            equity_data_points,
+            new_savings_data_points
+        ) {
             (chart) ? chart.destroy() : null;
             let labels = [];
             for (let i=1; i<saving_data_points.length; i++) {labels.push(i);}
@@ -21842,21 +22009,28 @@
                             backgroundColor: "#667eea",
                             borderColor: "#667eea",
                             data: saving_data_points,
-                            fill: false
+                            fill: false,
                         },
                         {
-                            label: "Net income w/current job",
+                            label: "Income w/current job",
                             backgroundColor: "#000aea",
                             borderColor: "#000aea",
                             data: old_income_data_points,
-                            fill: false
+                            fill: false,
                         },
                         {
-                            label: "Net income w/new project",
+                            label: "Savings w/new project",
+                            backgroundColor: "#6af362",
+                            borderColor: "#6af362",
+                            data: new_savings_data_points,
+                            fill: false,
+                        },
+                        {
+                            label: "Income w/new project",
                             backgroundColor: "#48bb78",
                             borderColor: "#48bb78",
                             data: net_revenue_data_points,
-                            fill: false
+                            fill: false,
                         },
                         {
                             label: "Equity",
@@ -21865,6 +22039,7 @@
                             data: equity_data_points,
                             fill: false,
                             borderDash: [8,3],
+                            hidden: true
                         }
                     ]
                 };
@@ -21893,11 +22068,12 @@
                         },
                         tooltips: {
                             intersect: true,
-                            mode: 'nearest'
+                            mode: 'nearest',
+                            intersect: false
                         },
                         elements: {
                             point:{
-                                radius: 3
+                                radius: 0
                             }
                         }
                     },
@@ -21926,77 +22102,82 @@
     		$$invalidate('savings', savings);
     	}
 
-    	function input4_input_handler() {
+    	function input4_change_input_handler() {
+    		savings = to_number(this.value);
+    		$$invalidate('savings', savings);
+    	}
+
+    	function input5_input_handler() {
     		month_to_first_dollar = to_number(this.value);
     		$$invalidate('month_to_first_dollar', month_to_first_dollar);
     	}
 
-    	function input5_input_handler() {
+    	function input6_input_handler() {
     		number_of_customer_first_month = to_number(this.value);
     		$$invalidate('number_of_customer_first_month', number_of_customer_first_month);
     	}
 
-    	function input6_input_handler() {
+    	function input7_input_handler() {
     		arpa = to_number(this.value);
     		$$invalidate('arpa', arpa);
     	}
 
-    	function input7_change_input_handler() {
+    	function input8_change_input_handler() {
     		arpa = to_number(this.value);
     		$$invalidate('arpa', arpa);
     	}
 
-    	function input8_input_handler() {
+    	function input9_input_handler() {
     		cost_per_customer = to_number(this.value);
     		$$invalidate('cost_per_customer', cost_per_customer);
     	}
 
-    	function input9_change_input_handler() {
+    	function input10_change_input_handler() {
     		cost_per_customer = to_number(this.value);
     		$$invalidate('cost_per_customer', cost_per_customer);
     	}
 
-    	function input10_input_handler() {
+    	function input11_input_handler() {
     		fixed_cost = to_number(this.value);
     		$$invalidate('fixed_cost', fixed_cost);
     	}
 
-    	function input11_input_handler() {
+    	function input12_input_handler() {
     		growth = to_number(this.value);
     		$$invalidate('growth', growth);
     	}
 
-    	function input12_change_input_handler() {
+    	function input13_change_input_handler() {
     		growth = to_number(this.value);
     		$$invalidate('growth', growth);
     	}
 
-    	function input13_input_handler() {
+    	function input14_input_handler() {
     		churn = to_number(this.value);
     		$$invalidate('churn', churn);
     	}
 
-    	function input14_change_input_handler() {
+    	function input15_change_input_handler() {
     		churn = to_number(this.value);
     		$$invalidate('churn', churn);
     	}
 
-    	function input15_input_handler() {
+    	function input16_input_handler() {
     		part_of_revenue_income = to_number(this.value);
     		$$invalidate('part_of_revenue_income', part_of_revenue_income);
     	}
 
-    	function input16_input_handler() {
+    	function input17_input_handler() {
     		ownership = to_number(this.value);
     		$$invalidate('ownership', ownership);
     	}
 
-    	function input17_change_input_handler() {
+    	function input18_change_input_handler() {
     		ownership = to_number(this.value);
     		$$invalidate('ownership', ownership);
     	}
 
-    	function input18_input_handler() {
+    	function input19_input_handler() {
     		valuation_multiple = to_number(this.value);
     		$$invalidate('valuation_multiple', valuation_multiple);
     	}
@@ -22011,32 +22192,60 @@
     		$$invalidate('canvas', canvas);
     	}
 
-    	$$self.$$.update = ($$dirty = { ownership: 1, valuation_multiple: 1, number_of_customer_first_month: 1, valuation_metric: 1, arpa: 1, cost_per_customer: 1, saving_data_points: 1, old_income_data_points: 1, new_income_data_points: 1, equity_data_points: 1, savings: 1, annual_raise: 1, monthly_income: 1, monthly_outflow: 1, growth: 1, churn: 1, part_of_revenue_income: 1, fixed_cost: 1, chart: 1 }) => {
-    		if ($$dirty.ownership || $$dirty.valuation_multiple || $$dirty.number_of_customer_first_month || $$dirty.valuation_metric || $$dirty.arpa || $$dirty.cost_per_customer || $$dirty.saving_data_points || $$dirty.old_income_data_points || $$dirty.new_income_data_points || $$dirty.equity_data_points || $$dirty.savings || $$dirty.annual_raise || $$dirty.monthly_income || $$dirty.monthly_outflow || $$dirty.growth || $$dirty.churn || $$dirty.part_of_revenue_income || $$dirty.fixed_cost || $$dirty.chart) { {
+    	$$self.$$.update = ($$dirty = { ownership: 1, valuation_multiple: 1, number_of_customer_first_month: 1, valuation_metric: 1, arpa: 1, cost_per_customer: 1, saving_data_points: 1, old_income_data_points: 1, new_income_data_points: 1, equity_data_points: 1, new_savings_data_points: 1, savings: 1, annual_raise: 1, monthly_income: 1, monthly_outflow: 1, growth: 1, churn: 1, part_of_revenue_income: 1, fixed_cost: 1, month_to_reached_data: 1, chart: 1 }) => {
+    		if ($$dirty.ownership || $$dirty.valuation_multiple || $$dirty.number_of_customer_first_month || $$dirty.valuation_metric || $$dirty.arpa || $$dirty.cost_per_customer || $$dirty.saving_data_points || $$dirty.old_income_data_points || $$dirty.new_income_data_points || $$dirty.equity_data_points || $$dirty.new_savings_data_points || $$dirty.savings || $$dirty.annual_raise || $$dirty.monthly_income || $$dirty.monthly_outflow || $$dirty.growth || $$dirty.churn || $$dirty.part_of_revenue_income || $$dirty.fixed_cost || $$dirty.month_to_reached_data || $$dirty.chart) { {
             	    $$invalidate('equity', equity = Math.floor(ownership / 100 * valuation_multiple * number_of_customer_first_month * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer)));
             	    saving_data_points.splice(0, saving_data_points.length);
             	    old_income_data_points.splice(0, old_income_data_points.length);
                     new_income_data_points.splice(0, new_income_data_points.length);
                     equity_data_points.splice(0, equity_data_points.length);
+                    new_savings_data_points.splice(0, new_savings_data_points.length);
+            
                     let last_month_savings = savings;
+                    let last_month_new_savings = savings;
                     let monthly_raise = annual_raise / 12;
             
-            	    for (let i=0; i<=36; i++) {
+                    $$invalidate('month_to_reached_data', month_to_reached_data = {
+                        old_salary_reached: null,
+                        old_salary_with_raise_reached: null,
+                        profitability: null,
+                        salary_covering_expense: null,
+                        old_savings_reached: null,
+                        old_savings_with_raise_reached: null
+                    });
             
+            	    for (let i=0; i<=36; i++) {
             	        let income = monthly_income * Math.pow( 1 + monthly_raise / 100, i);
-                        saving_data_points.push(Math.floor(last_month_savings + ( income - monthly_outflow)));
-                        last_month_savings += ( income - monthly_outflow);
                         old_income_data_points.push(Math.floor(income));
             
+                        let old_savings = Math.floor(last_month_savings + ( income - monthly_outflow));
+                        saving_data_points.push(old_savings);
+                        last_month_savings += ( income - monthly_outflow);
+            
                         let new_number_of_customer = (number_of_customer_first_month * Math.pow( 1 + growth / 100, i) * Math.pow( 1 - churn / 100, i));
-                        let current_month_revenue = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
-                        new_income_data_points.push(Math.floor(current_month_revenue - monthly_outflow));
+                        let new_income = (part_of_revenue_income / 100) * (new_number_of_customer * (arpa - cost_per_customer) - fixed_cost);
+                        new_income_data_points.push(Math.floor(new_income));
             
                         let new_equity = ownership / 100 * valuation_multiple * new_number_of_customer * ((valuation_metric=="arpa") ? arpa : arpa - cost_per_customer);
                         equity_data_points.push(Math.floor(new_equity));
+            
+                        let new_savings = last_month_new_savings + new_income - monthly_outflow;
+                        new_savings_data_points.push(Math.floor(new_savings));
+                        last_month_new_savings += (new_income - monthly_outflow);
+            
+                        if (new_income > old_income_data_points[0] && !month_to_reached_data["old_salary_reached"]) {month_to_reached_data["old_salary_reached"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+                        if (new_income > income && !month_to_reached_data["old_salary_with_raise_reached"]) {month_to_reached_data["old_salary_with_raise_reached"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+                        if (new_income > 0 && !month_to_reached_data["profitability"]) {month_to_reached_data["profitability"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+                        if (new_income > monthly_outflow && !month_to_reached_data["salary_covering_expense"]) {month_to_reached_data["salary_covering_expense"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+                        if (new_income > monthly_outflow && !month_to_reached_data["salary_covering_expense"]) {month_to_reached_data["salary_covering_expense"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+                        if (new_savings > saving_data_points[0] && !month_to_reached_data["old_savings_reached"]) {month_to_reached_data["old_savings_reached"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+                        if (new_savings > old_savings && !month_to_reached_data["old_savings_with_raise_reached"]) {month_to_reached_data["old_savings_with_raise_reached"] = i + 1; $$invalidate('month_to_reached_data', month_to_reached_data), $$invalidate('ownership', ownership), $$invalidate('valuation_multiple', valuation_multiple), $$invalidate('number_of_customer_first_month', number_of_customer_first_month), $$invalidate('valuation_metric', valuation_metric), $$invalidate('arpa', arpa), $$invalidate('cost_per_customer', cost_per_customer), $$invalidate('saving_data_points', saving_data_points), $$invalidate('old_income_data_points', old_income_data_points), $$invalidate('new_income_data_points', new_income_data_points), $$invalidate('equity_data_points', equity_data_points), $$invalidate('new_savings_data_points', new_savings_data_points), $$invalidate('savings', savings), $$invalidate('annual_raise', annual_raise), $$invalidate('monthly_income', monthly_income), $$invalidate('monthly_outflow', monthly_outflow), $$invalidate('growth', growth), $$invalidate('churn', churn), $$invalidate('part_of_revenue_income', part_of_revenue_income), $$invalidate('fixed_cost', fixed_cost), $$invalidate('chart', chart);}
+            
                     }
             
                     (chart) ? chart.update() : null;
+            
+            
                 } }
     	};
 
@@ -22058,25 +22267,27 @@
     		valuation_metric,
     		equity,
     		canvas,
+    		month_to_reached_data,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
     		input3_input_handler,
-    		input4_input_handler,
+    		input4_change_input_handler,
     		input5_input_handler,
     		input6_input_handler,
-    		input7_change_input_handler,
-    		input8_input_handler,
-    		input9_change_input_handler,
-    		input10_input_handler,
+    		input7_input_handler,
+    		input8_change_input_handler,
+    		input9_input_handler,
+    		input10_change_input_handler,
     		input11_input_handler,
-    		input12_change_input_handler,
-    		input13_input_handler,
-    		input14_change_input_handler,
-    		input15_input_handler,
+    		input12_input_handler,
+    		input13_change_input_handler,
+    		input14_input_handler,
+    		input15_change_input_handler,
     		input16_input_handler,
-    		input17_change_input_handler,
-    		input18_input_handler,
+    		input17_input_handler,
+    		input18_change_input_handler,
+    		input19_input_handler,
     		select_change_handler,
     		canvas_1_binding
     	};
