@@ -170,7 +170,12 @@
                     tooltips: {
                         intersect: true,
                         mode: 'nearest',
-                        intersect: false
+                        intersect: false,
+                        callbacks: {
+                            title: function(tooltipItems, data) {
+                                return "Nb of months: " + tooltipItems[0].xLabel;
+                            }
+                        }
                     },
                     elements: {
                         point:{
