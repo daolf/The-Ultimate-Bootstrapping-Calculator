@@ -1,11 +1,15 @@
-# tailwindcss-svelte-starter
+# The Ultimate Bootstrapping Calculator
 
-A starter for building Svelte web apps with tailwindcss.
+Considering leaving your job to build your own thing?
+
+This page is here to help you make the right decision.
+
+Demo [here](https://www.shouldiresign.com/).
 
 ## Getting Started
 
 ```bash
-git clone https://github.com/marcograhl/tailwindcss-svelte-starter
+git clone https://github.com/daolf/The-Ultimate-Bootstrapping-Calculator
 ```
 
 Then, install the dependencies:
